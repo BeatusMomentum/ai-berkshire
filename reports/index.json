@@ -1,5 +1,5 @@
 {
-  "count": 2409,
+  "count": 2410,
   "reports": [
     {
       "title": "财务表",
@@ -52,6 +52,17 @@
       "group": "MiniMax",
       "series": "",
       "type": "底稿",
+      "date": "2026-10-18",
+      "date_source": "文件名",
+      "ticker": ""
+    },
+    {
+      "title": "收入增 283%、毛利率 17.9%：MiniMax 卖的是便宜的智能",
+      "path": "reports/MINIMAX/MiniMax-公众号-20261018.md",
+      "bucket": "公司",
+      "group": "MiniMax",
+      "series": "",
+      "type": "公众号",
       "date": "2026-10-18",
       "date_source": "文件名",
       "ticker": ""
