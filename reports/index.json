@@ -1,6 +1,50 @@
 {
-  "count": 2408,
+  "count": 2409,
   "reports": [
+    {
+      "title": "财务表",
+      "path": "reports/七公司投资研究-20261002/腾讯/财务表.md",
+      "bucket": "专题",
+      "group": "七公司投资研究-20261002",
+      "series": "腾讯",
+      "type": "研究",
+      "date": "2026-10-18",
+      "date_source": "git",
+      "ticker": ""
+    },
+    {
+      "title": "美团研究报告审计说明",
+      "path": "reports/七公司投资研究-20261002/美团/审计说明.md",
+      "bucket": "专题",
+      "group": "七公司投资研究-20261002",
+      "series": "美团",
+      "type": "底稿",
+      "date": "2026-10-18",
+      "date_source": "git",
+      "ticker": ""
+    },
+    {
+      "title": "财务表",
+      "path": "reports/七公司投资研究-20261002/拼多多/财务表.md",
+      "bucket": "专题",
+      "group": "七公司投资研究-20261002",
+      "series": "拼多多",
+      "type": "研究",
+      "date": "2026-10-18",
+      "date_source": "git",
+      "ticker": ""
+    },
+    {
+      "title": "快手研究报告审计说明",
+      "path": "reports/七公司投资研究-20261002/快手/审计说明.md",
+      "bucket": "专题",
+      "group": "七公司投资研究-20261002",
+      "series": "快手",
+      "type": "底稿",
+      "date": "2026-10-18",
+      "date_source": "git",
+      "ticker": ""
+    },
     {
       "title": "MiniMax 创始人访谈研究与结论复核",
       "path": "reports/MINIMAX/MiniMax-创始人访谈研究与结论复核-20261018.md",
@@ -425,6 +469,17 @@
       "bucket": "专题",
       "group": "七公司投资研究-20261002",
       "series": "MiniMax",
+      "type": "研究",
+      "date": "2026-10-02",
+      "date_source": "文件名",
+      "ticker": ""
+    },
+    {
+      "title": "MiniMax（稀宇科技）投资研究报告",
+      "path": "reports/MINIMAX/MiniMax投资研究报告-20261002.md",
+      "bucket": "公司",
+      "group": "MiniMax",
+      "series": "",
       "type": "研究",
       "date": "2026-10-02",
       "date_source": "文件名",
@@ -26443,50 +26498,6 @@
       "type": "财报",
       "date": "2024-11-21",
       "date_source": "正文",
-      "ticker": ""
-    },
-    {
-      "title": "财务表",
-      "path": "reports/七公司投资研究-20261002/腾讯/财务表.md",
-      "bucket": "专题",
-      "group": "七公司投资研究-20261002",
-      "series": "腾讯",
-      "type": "研究",
-      "date": "",
-      "date_source": "缺失",
-      "ticker": ""
-    },
-    {
-      "title": "美团研究报告审计说明",
-      "path": "reports/七公司投资研究-20261002/美团/审计说明.md",
-      "bucket": "专题",
-      "group": "七公司投资研究-20261002",
-      "series": "美团",
-      "type": "底稿",
-      "date": "",
-      "date_source": "缺失",
-      "ticker": ""
-    },
-    {
-      "title": "财务表",
-      "path": "reports/七公司投资研究-20261002/拼多多/财务表.md",
-      "bucket": "专题",
-      "group": "七公司投资研究-20261002",
-      "series": "拼多多",
-      "type": "研究",
-      "date": "",
-      "date_source": "缺失",
-      "ticker": ""
-    },
-    {
-      "title": "快手研究报告审计说明",
-      "path": "reports/七公司投资研究-20261002/快手/审计说明.md",
-      "bucket": "专题",
-      "group": "七公司投资研究-20261002",
-      "series": "快手",
-      "type": "底稿",
-      "date": "",
-      "date_source": "缺失",
       "ticker": ""
     }
   ]
