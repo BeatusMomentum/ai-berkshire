@@ -1,4 +1,5 @@
 > 公众号发表：2026-07-14｜发表标题：MiniMax:表面 C 端消费公司,利润表上是 B 端 API 公司
+> 公众号原文：https://mp.weixin.qq.com/s?__biz=MzIzNjQ4Nzc2OQ==&mid=2247484039&idx=1&sn=afe99f508d22f9bfb07356e326bb49df
 > 原稿：[reports/MINIMAX/MiniMax-公众号-模型与护城河-20260714.md](../../reports/MINIMAX/MiniMax-公众号-模型与护城河-20260714.md)
 > 备注：原稿"表面出海公司"，发表改"C端消费公司"
 
