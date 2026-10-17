@@ -260,12 +260,12 @@
   ],
   "source_files": [
     {
-      "path": "/Users/linxuan/ai-berkshire/reports/七公司投资研究-20261002/泡泡玛特/证据/2022年报-历史补核.pdf",
+      "path": "reports/七公司投资研究-20261002/泡泡玛特/证据/2022年报-历史补核.pdf",
       "sha256": "113a569cdaac64d528ccd5d78b5da00d7d4d2aeeff3eb95cb8bb926f26b099ce",
       "size_bytes": 10820411
     },
     {
-      "path": "/Users/linxuan/ai-berkshire/reports/七公司投资研究-20261002/泡泡玛特/证据/2023年报-历史补核.pdf",
+      "path": "reports/七公司投资研究-20261002/泡泡玛特/证据/2023年报-历史补核.pdf",
       "sha256": "1312bd4fec38932f30608c7cec35ec19cc31a6cbaccb36aba9efe2b6dc8d6afa",
       "size_bytes": 6178467
     }

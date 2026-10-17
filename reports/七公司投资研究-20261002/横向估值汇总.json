@@ -9,7 +9,7 @@
     "buy_line": "350",
     "discount_rate": "10%",
     "base_gap": "0.113416745297021217355579944898882920228",
-    "report": "/Users/linxuan/ai-berkshire/reports/七公司投资研究-20261002/腾讯/腾讯研究报告-20261002.md"
+    "report": "reports/七公司投资研究-20261002/腾讯/腾讯研究报告-20261002.md"
   },
   {
     "company": "快手",
@@ -21,7 +21,7 @@
     "buy_line": "21",
     "discount_rate": "11%",
     "base_gap": "-0.0472462021945277169195869019072242271805",
-    "report": "/Users/linxuan/ai-berkshire/reports/七公司投资研究-20261002/快手/快手研究报告-20261002.md"
+    "report": "reports/七公司投资研究-20261002/快手/快手研究报告-20261002.md"
   },
   {
     "company": "拼多多",
@@ -33,7 +33,7 @@
     "buy_line": "75",
     "discount_rate": "12%",
     "base_gap": "0.426033379792925553832443038409168562092",
-    "report": "/Users/linxuan/ai-berkshire/reports/七公司投资研究-20261002/拼多多/拼多多研究报告-20261002.md"
+    "report": "reports/七公司投资研究-20261002/拼多多/拼多多研究报告-20261002.md"
   },
   {
     "company": "美团",
@@ -45,7 +45,7 @@
     "buy_line": "49",
     "discount_rate": "11%",
     "base_gap": "-0.0604108236653638820266403068513167177635",
-    "report": "/Users/linxuan/ai-berkshire/reports/七公司投资研究-20261002/美团/美团研究报告-20261002.md"
+    "report": "reports/七公司投资研究-20261002/美团/美团研究报告-20261002.md"
   },
   {
     "company": "泡泡玛特",
@@ -57,7 +57,7 @@
     "buy_line": "91",
     "discount_rate": "11%",
     "base_gap": "-0.1856602157311718539761807715831851753405",
-    "report": "/Users/linxuan/ai-berkshire/reports/七公司投资研究-20261002/泡泡玛特/泡泡玛特研究报告-20261002.md"
+    "report": "reports/七公司投资研究-20261002/泡泡玛特/泡泡玛特研究报告-20261002.md"
   },
   {
     "company": "茅台",
@@ -69,7 +69,7 @@
     "buy_line": "780",
     "discount_rate": "10%",
     "base_gap": "-0.2255260096069190856406873189392005704727",
-    "report": "/Users/linxuan/ai-berkshire/reports/七公司投资研究-20261002/茅台/茅台研究报告-20261002.md"
+    "report": "reports/七公司投资研究-20261002/茅台/茅台研究报告-20261002.md"
   },
   {
     "company": "MiniMax",
@@ -81,6 +81,6 @@
     "buy_line": "66",
     "discount_rate": "15%",
     "base_gap": "-0.5822450493099859803661703677594347359675",
-    "report": "/Users/linxuan/ai-berkshire/reports/七公司投资研究-20261002/MiniMax/MiniMax研究报告-20261002.md"
+    "report": "reports/七公司投资研究-20261002/MiniMax/MiniMax研究报告-20261002.md"
   }
 ]

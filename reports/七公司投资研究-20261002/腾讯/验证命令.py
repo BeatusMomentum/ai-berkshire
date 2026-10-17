@@ -1,6 +1,6 @@
 import pathlib,subprocess,json
 from decimal import Decimal as D
-base=pathlib.Path('/Users/linxuan/ai-berkshire/reports/七公司投资研究-20261002')
+base=pathlib.Path(__file__).resolve().parent.parent
 commands={
 '腾讯':[
 ['verify-market-cap','--price','421.2','--shares','9092605595','--reported','3880000000000','--currency','HKD'],
