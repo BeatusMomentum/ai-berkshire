@@ -172,6 +172,76 @@ def collect():
     return items
 
 
+# ---------- 内容筛选：只上成品，不上中间产物 ----------
+# 中间产物（审计、核验、证据、底稿、数据收集、搜索日志、自动扫描、召回池分视角稿等）仍保留在 GitHub，
+# 阅读站点只收录成品报告。被排除的页面若被正文引用，链接自动指向 GitHub 原文。
+MID_DIR = re.compile(r"/(evidence|证据|research|data|sources|audit[^/]*|审计[^/]*|[^/]*审读[^/]*|[^/]*核验[^/]*|[^/]*证据)/", re.I)
+MID_NAME = re.compile(
+    r"审计|审查|审读|审阅|评审|核验|复核|校验|核对|对账|核查|自查|底稿|证据|来源登记|来源与|勘误|修订记录|"
+    r"data[_-]?collection|数据收集|search[-_]?log|sources|todo|笔记|素材|financial[-_]rigor|^计算|财务表$|readme__|__readme|"
+    r"工作稿|草稿|draft|抽检|待.{0,4}复核", re.I)
+POOL_PERSPECTIVE = re.compile(r"/0[1-4]-[^/]*视角\.md$")
+BOTTLENECK_RUN = re.compile(r"^reports/bottleneck-map/(20\d\d-\d\d-\d\d|daily)/")
+
+
+def exclude_reason(it):
+    path, name, title = it["path"], os.path.basename(it["path"]), it["title"]
+    if BOTTLENECK_RUN.match(path):
+        return "自动扫描与日报"
+    if MID_DIR.search("/" + path):
+        return "证据/审计/调研目录"
+    if MID_NAME.search(name[:-3]) or MID_NAME.search(title):
+        return "审计核验底稿"
+    if it["type"] == "底稿" and "系列说明" not in title:
+        return "审计核验底稿"
+    if it["bucket"] == "筛选池" and POOL_PERSPECTIVE.search(path):
+        return "召回池分视角稿"
+    if path in ("reports/README.md",) or path.startswith("reports/_index/"):
+        return "索引页"
+    if it["bucket"] == "筛选池" and name == "README.md" and path.count("/") > 2:
+        return "召回池分视角稿"
+    if it["type"] == "导读" and it.get("_size", 9999) < 600:
+        return "过短"
+    if it.get("_size", 9999) < 800:
+        return "过短"
+    return ""
+
+
+def curate(items):
+    # 公众号：有发表版（投资炼丹）的，隐藏 reports/ 里对应的原稿，避免同文两份
+    drafts = set()
+    for it in items:
+        if it["bucket"] == "公众号发表":
+            m = re.search(r"原稿：\[[^\]]*\]\(([^)]+)\)", read(it["path"]))
+            if m:
+                drafts.add(os.path.normpath(os.path.join(os.path.dirname(it["path"]), m.group(1))))
+    kept, dropped = [], defaultdict(int)
+    for it in items:
+        it["_size"] = len(read(it["path"]).encode("utf-8"))
+        why = "已有公众号发表版" if it["path"] in drafts else exclude_reason(it)
+        if why:
+            dropped[why] += 1
+        else:
+            kept.append(it)
+    # 去重：内容完全相同的只留一份；同目录同标题的多个版本只留最新最长的一份
+    seen_hash, best = {}, {}
+    for it in sorted(kept, key=lambda x: (x["date"] or "", x["_size"]), reverse=True):
+        h = hashlib.sha1(read(it["path"]).encode("utf-8")).hexdigest()
+        key = (os.path.dirname(it["path"]), re.sub(r"\s+", "", it["title"]))
+        if h in seen_hash or key in best:
+            dropped["重复或旧版本"] += 1
+            continue
+        seen_hash[h] = 1
+        best[key] = it
+    kept = [it for it in kept if best.get((os.path.dirname(it["path"]), re.sub(r"\s+", "", it["title"]))) is it]
+    for it in kept:
+        if it["type"] == "底稿":
+            it["type"] = "导读"
+    print("收录 %d 篇；排除 %d 篇：%s" % (len(kept), sum(dropped.values()),
+          "，".join("%s %d" % kv for kv in sorted(dropped.items(), key=lambda x: -x[1]))))
+    return kept
+
+
 def git_date(path):
     try:
         out = sh(["git", "log", "-1", "--format=%cs", "--", path]).strip()
@@ -376,7 +446,7 @@ def write(out_dir, rel_path, content):
 
 
 def build(out_dir):
-    items = collect()
+    items = curate(collect())
     by_path = {i["path"]: i for i in items}
     if os.path.isdir(out_dir):
         shutil.rmtree(out_dir)
