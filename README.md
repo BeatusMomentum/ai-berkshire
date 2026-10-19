@@ -16,7 +16,7 @@
 
 <!-- REPORTS-BANNER:START 由 tools/reports_index.py 自动更新，勿手改 -->
 
-> 📊 **日更内容是研究报告，全部在 [研究报告索引](reports/README.md)。** 2410 份报告 · 108 家公司 · 25 个专题，按公司与专题分组，更新至 2026-10-18。
+> 📊 **日更内容是研究报告，全部在 [研究报告索引](reports/README.md)。** 2436 份报告 · 108 家公司 · 28 个专题，按公司与专题分组，更新至 2026-10-19。
 
 <!-- REPORTS-BANNER:END -->
 
@@ -659,18 +659,14 @@ REM 可选：安装 Codex slash prompts
 
 <!-- REPORTS-INDEX:START 由 tools/reports_index.py 自动更新，勿手改 -->
 
-**📊 [全部研究索引 →](reports/README.md)** ｜ 2410 份报告 · 108 家公司 · 25 个专题 · 更新至 2026-10-18
+**📊 [全部研究索引 →](reports/README.md)** ｜ 2436 份报告 · 108 家公司 · 28 个专题 · 更新至 2026-10-19
 
 最近更新：
 
 | 日期 | 报告 | 归属 |
 |------|------|------|
-| 2026-10-18 | [财务表](reports/七公司投资研究-20261002/腾讯/财务表.md) | 七公司投资研究 |
-| 2026-10-18 | [财务表](reports/七公司投资研究-20261002/拼多多/财务表.md) | 七公司投资研究 |
-| 2026-10-18 | [收入增 283%、毛利率 17.9%：MiniMax 卖的是便宜的智能](reports/MINIMAX/MiniMax-公众号-20261018.md) | MiniMax |
-| 2026-10-17 | [快手与可灵：创始人、技术选型、赛道与十年推演](reports/快手/可灵与快手十年推演-20261017/快手与可灵-创始人技术赛道与十年推演-20261017.md) | 快手 |
-| 2026-10-17 | [MiniMax 深度研究：创始人、技术路线、赛道与十年推演](reports/MINIMAX/MiniMax-深度研究-创始人技术赛道与十年推演-20261017.md) | MiniMax |
-| 2026-10-16 | [快手与可灵：财务与经营证据底稿](reports/快手/快手可灵深度研究-20261016/财务与经营证据.md) | 快手 |
+| 2026-10-19 | [七姐妹股份、非经常损益与净现金桥接复核](reports/美股七姐妹-investment-team-20261019/evidence/shares-assets-review.md) | 美股七姐妹-investment-team |
+| 2026-10-19 | [美股七姐妹财务口径独立复核](reports/美股七姐妹-investment-team-20261019/evidence/price-and-calendar-review.md) | 美股七姐妹-investment-team |
 
 <!-- REPORTS-INDEX:END -->
 
