@@ -651,7 +651,7 @@ def build(out_dir):
         issue = "%s/issues/new?%s" % (REPO_URL, "&".join("%s=%s" % (k, quote(v, safe="")) for k, v in [
             ("template", "data_error.yml"), ("title", "[Data] " + it["title"][:60]),
             ("ticker", it["group"] if it["bucket"] in ("公司", "公众号发表") else ""),
-            ("source", "%s\n阅读站：%s%s" % (it["path"], SITE_URL, it["url"]))]))
+            ("source", "%s （阅读站：%s%s）" % (it["path"], SITE_URL, it["url"]))]))
         tail += ('<p class="wxline">精选研究与报告之外的判断，首发在公众号「复利炼丹炉」'
                  ' · <a href="../about.html">扫码关注</a>'
                  '<span class="fix">发现数据错误？<a href="%s" rel="nofollow">提交纠错</a>（需附正确值与来源）</span></p>') % html.escape(issue)
