@@ -1,8 +1,19 @@
 {
-  "count": 2436,
-  "published": 2246,
+  "count": 2437,
+  "published": 2247,
   "drafts": 190,
   "reports": [
+    {
+      "title": "苹果（AAPL）投资研究报告",
+      "path": "reports/苹果/苹果投资研究报告-20261019.md",
+      "bucket": "公司",
+      "group": "苹果",
+      "series": "",
+      "type": "研究",
+      "date": "2026-10-19",
+      "date_source": "文件名",
+      "ticker": ""
+    },
     {
       "title": "七姐妹股份、非经常损益与净现金桥接复核",
       "path": "reports/美股七姐妹-investment-team-20261019/evidence/shares-assets-review.md",
