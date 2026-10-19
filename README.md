@@ -16,11 +16,13 @@
 
 <!-- REPORTS-BANNER:START 由 tools/reports_index.py 自动更新，勿手改 -->
 
-> 📊 **日更内容是研究报告，全部在 [研究报告索引](reports/README.md)。** 2247 份报告 · 109 家公司 · 26 个专题，按公司与专题分组，更新至 2026-10-19。
+> 📖 **想读报告，用 [阅读站](https://xbtlin.github.io/ai-berkshire/)**：成品报告按公司、专题、时间整理，电脑和手机都好读，可搜索、记住阅读进度。
+>
+> 📊 全部 2247 份报告（含底稿）· 109 家公司 · 26 个专题，GitHub 上的完整目录见 [研究报告索引](reports/README.md)，更新至 2026-10-19。
 
 <!-- REPORTS-BANNER:END -->
 
-[实盘业绩](#real-track-record) · [为什么不能直接问AI](#为什么不能直接问-ai) · [Skills 一览](#skills-一览22个) · [快速开始](#快速开始) · [实战报告](#实战研究报告) · [研究索引](reports/README.md) · [设计理念](#设计理念) · [公众号](#精选研究首发于公众号)
+[📖 阅读站](https://xbtlin.github.io/ai-berkshire/) · [实盘业绩](#real-track-record) · [为什么不能直接问AI](#为什么不能直接问-ai) · [Skills 一览](#skills-一览22个) · [快速开始](#快速开始) · [实战报告](#实战研究报告) · [研究索引](reports/README.md) · [设计理念](#设计理念) · [公众号](#精选研究首发于公众号)
 
 ---
 
