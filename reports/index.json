@@ -1,5 +1,7 @@
 {
   "count": 2436,
+  "published": 2246,
+  "drafts": 190,
   "reports": [
     {
       "title": "七姐妹股份、非经常损益与净现金桥接复核",
@@ -7,7 +9,7 @@
       "bucket": "专题",
       "group": "美股七姐妹-investment-team-20261019",
       "series": "evidence",
-      "type": "研究",
+      "type": "底稿",
       "date": "2026-10-19",
       "date_source": "正文",
       "ticker": ""
@@ -18,7 +20,7 @@
       "bucket": "专题",
       "group": "美股七姐妹-investment-team-20261019",
       "series": "evidence",
-      "type": "研究",
+      "type": "底稿",
       "date": "2026-10-19",
       "date_source": "正文",
       "ticker": ""
@@ -29,7 +31,7 @@
       "bucket": "专题",
       "group": "美股七姐妹-investment-team-20261019",
       "series": "evidence",
-      "type": "研究",
+      "type": "底稿",
       "date": "2026-10-19",
       "date_source": "正文",
       "ticker": ""
@@ -161,7 +163,7 @@
       "bucket": "专题",
       "group": "美股七姐妹-20261019",
       "series": "特斯拉",
-      "type": "研究",
+      "type": "底稿",
       "date": "2026-10-19",
       "date_source": "git",
       "ticker": ""
@@ -194,7 +196,7 @@
       "bucket": "专题",
       "group": "美股七姐妹-20261019",
       "series": "亚马逊",
-      "type": "研究",
+      "type": "底稿",
       "date": "2026-10-19",
       "date_source": "git",
       "ticker": ""
@@ -205,7 +207,7 @@
       "bucket": "专题",
       "group": "美股七姐妹-20261019",
       "series": "Meta",
-      "type": "研究",
+      "type": "底稿",
       "date": "2026-10-19",
       "date_source": "git",
       "ticker": ""
@@ -293,7 +295,7 @@
       "bucket": "专题",
       "group": "七公司投资研究-20261002",
       "series": "腾讯",
-      "type": "研究",
+      "type": "底稿",
       "date": "2026-10-18",
       "date_source": "git",
       "ticker": ""
@@ -315,7 +317,7 @@
       "bucket": "专题",
       "group": "七公司投资研究-20261002",
       "series": "拼多多",
-      "type": "研究",
+      "type": "底稿",
       "date": "2026-10-18",
       "date_source": "git",
       "ticker": ""
@@ -337,7 +339,7 @@
       "bucket": "公司",
       "group": "MiniMax",
       "series": "",
-      "type": "底稿",
+      "type": "研究",
       "date": "2026-10-18",
       "date_source": "文件名",
       "ticker": ""
@@ -458,7 +460,7 @@
       "bucket": "大师研究",
       "group": "李录",
       "series": "",
-      "type": "研究",
+      "type": "底稿",
       "date": "2026-10-09",
       "date_source": "文件名",
       "ticker": ""
@@ -469,7 +471,7 @@
       "bucket": "大师研究",
       "group": "李录",
       "series": "",
-      "type": "底稿",
+      "type": "公众号",
       "date": "2026-10-09",
       "date_source": "文件名",
       "ticker": ""
@@ -513,7 +515,7 @@
       "bucket": "大师研究",
       "group": "李录",
       "series": "",
-      "type": "研究",
+      "type": "底稿",
       "date": "2026-10-05",
       "date_source": "文件名",
       "ticker": ""
@@ -601,7 +603,7 @@
       "bucket": "专题",
       "group": "七公司投资研究-20261002",
       "series": "茅台",
-      "type": "研究",
+      "type": "底稿",
       "date": "2026-10-02",
       "date_source": "正文",
       "ticker": ""
@@ -645,7 +647,7 @@
       "bucket": "专题",
       "group": "七公司投资研究-20261002",
       "series": "泡泡玛特",
-      "type": "研究",
+      "type": "底稿",
       "date": "2026-10-02",
       "date_source": "正文",
       "ticker": ""
@@ -678,7 +680,7 @@
       "bucket": "专题",
       "group": "七公司投资研究-20261002",
       "series": "泡泡玛特",
-      "type": "研究",
+      "type": "底稿",
       "date": "2026-10-02",
       "date_source": "正文",
       "ticker": ""
@@ -689,7 +691,7 @@
       "bucket": "专题",
       "group": "七公司投资研究-20261002",
       "series": "",
-      "type": "研究",
+      "type": "底稿",
       "date": "2026-10-02",
       "date_source": "文件名",
       "ticker": ""
@@ -744,7 +746,7 @@
       "bucket": "专题",
       "group": "七公司投资研究-20261002",
       "series": "MiniMax",
-      "type": "研究",
+      "type": "底稿",
       "date": "2026-10-02",
       "date_source": "正文",
       "ticker": ""
@@ -810,7 +812,7 @@
       "bucket": "专题",
       "group": "智能廉价时代稀缺性研究-20260926",
       "series": "",
-      "type": "研究",
+      "type": "底稿",
       "date": "2026-09-26",
       "date_source": "文件名",
       "ticker": ""
@@ -821,7 +823,7 @@
       "bucket": "专题",
       "group": "智能廉价时代稀缺性研究-20260926",
       "series": "",
-      "type": "研究",
+      "type": "底稿",
       "date": "2026-09-26",
       "date_source": "文件名",
       "ticker": ""
@@ -898,7 +900,7 @@
       "bucket": "公司",
       "group": "茅台",
       "series": "moutai-pricing-capacity-20260925",
-      "type": "研究",
+      "type": "底稿",
       "date": "2026-09-25",
       "date_source": "文件名",
       "ticker": ""
@@ -909,7 +911,7 @@
       "bucket": "公司",
       "group": "茅台",
       "series": "moutai-demand-20260925",
-      "type": "研究",
+      "type": "底稿",
       "date": "2026-09-25",
       "date_source": "文件名",
       "ticker": ""
@@ -931,7 +933,7 @@
       "bucket": "公司",
       "group": "美团",
       "series": "AI利润模型-20260925",
-      "type": "研究",
+      "type": "底稿",
       "date": "2026-09-25",
       "date_source": "文件名",
       "ticker": ""
@@ -997,7 +999,7 @@
       "bucket": "公司",
       "group": "拼多多",
       "series": "AI利润模型-20260924",
-      "type": "研究",
+      "type": "底稿",
       "date": "2026-09-24",
       "date_source": "文件名",
       "ticker": ""
@@ -1195,7 +1197,7 @@
       "bucket": "公司",
       "group": "英伟达",
       "series": "商业模式与十年利润-20260907",
-      "type": "研究",
+      "type": "底稿",
       "date": "2026-09-07",
       "date_source": "文件名",
       "ticker": ""
@@ -1228,7 +1230,7 @@
       "bucket": "专题",
       "group": "腾讯与快手-看懂公司-20260906",
       "series": "",
-      "type": "深度系列",
+      "type": "底稿",
       "date": "2026-09-06",
       "date_source": "文件名",
       "ticker": ""
@@ -1382,7 +1384,7 @@
       "bucket": "公司",
       "group": "腾讯",
       "series": "《看懂腾讯》-20260906",
-      "type": "深度系列",
+      "type": "底稿",
       "date": "2026-09-06",
       "date_source": "文件名",
       "ticker": ""
@@ -1536,7 +1538,7 @@
       "bucket": "公司",
       "group": "快手",
       "series": "《看懂快手》-20260906",
-      "type": "深度系列",
+      "type": "底稿",
       "date": "2026-09-06",
       "date_source": "文件名",
       "ticker": ""
@@ -1591,7 +1593,7 @@
       "bucket": "公司",
       "group": "快手",
       "series": "《看懂快手》-20260906",
-      "type": "深度系列",
+      "type": "底稿",
       "date": "2026-09-06",
       "date_source": "文件名",
       "ticker": ""
@@ -1602,7 +1604,7 @@
       "bucket": "专题",
       "group": "大模型全景对比-20260906",
       "series": "evidence",
-      "type": "横评对比",
+      "type": "底稿",
       "date": "2026-09-06",
       "date_source": "git",
       "ticker": ""
@@ -1613,7 +1615,7 @@
       "bucket": "专题",
       "group": "大模型全景对比-20260906",
       "series": "evidence",
-      "type": "横评对比",
+      "type": "底稿",
       "date": "2026-09-06",
       "date_source": "git",
       "ticker": ""
@@ -1624,7 +1626,7 @@
       "bucket": "专题",
       "group": "大模型全景对比-20260906",
       "series": "evidence",
-      "type": "横评对比",
+      "type": "底稿",
       "date": "2026-09-06",
       "date_source": "git",
       "ticker": ""
@@ -1635,7 +1637,7 @@
       "bucket": "专题",
       "group": "大模型全景对比-20260906",
       "series": "evidence",
-      "type": "横评对比",
+      "type": "底稿",
       "date": "2026-09-06",
       "date_source": "git",
       "ticker": ""
@@ -1646,7 +1648,7 @@
       "bucket": "专题",
       "group": "大模型全景对比-20260906",
       "series": "evidence",
-      "type": "横评对比",
+      "type": "底稿",
       "date": "2026-09-06",
       "date_source": "git",
       "ticker": ""
@@ -1657,7 +1659,7 @@
       "bucket": "专题",
       "group": "大模型全景对比-20260906",
       "series": "evidence",
-      "type": "横评对比",
+      "type": "底稿",
       "date": "2026-09-06",
       "date_source": "git",
       "ticker": ""
@@ -1668,7 +1670,7 @@
       "bucket": "专题",
       "group": "大模型全景对比-20260906",
       "series": "evidence",
-      "type": "横评对比",
+      "type": "底稿",
       "date": "2026-09-06",
       "date_source": "git",
       "ticker": ""
@@ -1679,7 +1681,7 @@
       "bucket": "专题",
       "group": "大模型全景对比-20260906",
       "series": "evidence",
-      "type": "横评对比",
+      "type": "底稿",
       "date": "2026-09-06",
       "date_source": "git",
       "ticker": ""
@@ -1690,7 +1692,7 @@
       "bucket": "专题",
       "group": "大模型全景对比-20260906",
       "series": "evidence",
-      "type": "横评对比",
+      "type": "底稿",
       "date": "2026-09-06",
       "date_source": "git",
       "ticker": ""
@@ -1701,7 +1703,7 @@
       "bucket": "专题",
       "group": "大模型全景对比-20260906",
       "series": "evidence",
-      "type": "横评对比",
+      "type": "底稿",
       "date": "2026-09-06",
       "date_source": "git",
       "ticker": ""
@@ -1712,7 +1714,7 @@
       "bucket": "专题",
       "group": "大模型全景对比-20260906",
       "series": "evidence",
-      "type": "横评对比",
+      "type": "底稿",
       "date": "2026-09-06",
       "date_source": "git",
       "ticker": ""
@@ -1723,7 +1725,7 @@
       "bucket": "专题",
       "group": "大模型全景对比-20260906",
       "series": "evidence",
-      "type": "横评对比",
+      "type": "底稿",
       "date": "2026-09-06",
       "date_source": "git",
       "ticker": ""
@@ -1734,7 +1736,7 @@
       "bucket": "专题",
       "group": "大模型全景对比-20260906",
       "series": "evidence",
-      "type": "横评对比",
+      "type": "底稿",
       "date": "2026-09-06",
       "date_source": "git",
       "ticker": ""
@@ -1745,7 +1747,7 @@
       "bucket": "专题",
       "group": "大模型全景对比-20260906",
       "series": "evidence",
-      "type": "横评对比",
+      "type": "底稿",
       "date": "2026-09-06",
       "date_source": "git",
       "ticker": ""
@@ -1756,7 +1758,7 @@
       "bucket": "专题",
       "group": "大模型全景对比-20260906",
       "series": "evidence",
-      "type": "横评对比",
+      "type": "底稿",
       "date": "2026-09-06",
       "date_source": "git",
       "ticker": ""
@@ -1767,7 +1769,7 @@
       "bucket": "专题",
       "group": "大模型全景对比-20260906",
       "series": "evidence",
-      "type": "横评对比",
+      "type": "底稿",
       "date": "2026-09-06",
       "date_source": "git",
       "ticker": ""
@@ -1778,7 +1780,7 @@
       "bucket": "专题",
       "group": "大模型全景对比-20260906",
       "series": "evidence",
-      "type": "横评对比",
+      "type": "底稿",
       "date": "2026-09-06",
       "date_source": "git",
       "ticker": ""
@@ -1789,7 +1791,7 @@
       "bucket": "专题",
       "group": "大模型全景对比-20260906",
       "series": "evidence",
-      "type": "横评对比",
+      "type": "底稿",
       "date": "2026-09-06",
       "date_source": "git",
       "ticker": ""
@@ -1800,7 +1802,7 @@
       "bucket": "专题",
       "group": "大模型全景对比-20260906",
       "series": "evidence",
-      "type": "横评对比",
+      "type": "底稿",
       "date": "2026-09-06",
       "date_source": "git",
       "ticker": ""
@@ -1811,7 +1813,7 @@
       "bucket": "专题",
       "group": "大模型全景对比-20260906",
       "series": "evidence",
-      "type": "横评对比",
+      "type": "底稿",
       "date": "2026-09-06",
       "date_source": "git",
       "ticker": ""
@@ -1822,7 +1824,7 @@
       "bucket": "专题",
       "group": "大模型全景对比-20260906",
       "series": "evidence",
-      "type": "横评对比",
+      "type": "底稿",
       "date": "2026-09-06",
       "date_source": "git",
       "ticker": ""
@@ -1833,7 +1835,7 @@
       "bucket": "专题",
       "group": "大模型全景对比-20260906",
       "series": "evidence",
-      "type": "横评对比",
+      "type": "底稿",
       "date": "2026-09-06",
       "date_source": "git",
       "ticker": ""
@@ -1844,7 +1846,7 @@
       "bucket": "专题",
       "group": "大模型全景对比-20260906",
       "series": "evidence",
-      "type": "横评对比",
+      "type": "底稿",
       "date": "2026-09-06",
       "date_source": "git",
       "ticker": ""
@@ -1855,7 +1857,7 @@
       "bucket": "专题",
       "group": "大模型全景对比-20260906",
       "series": "evidence",
-      "type": "横评对比",
+      "type": "底稿",
       "date": "2026-09-06",
       "date_source": "git",
       "ticker": ""
@@ -1866,7 +1868,7 @@
       "bucket": "专题",
       "group": "大模型全景对比-20260906",
       "series": "evidence",
-      "type": "横评对比",
+      "type": "底稿",
       "date": "2026-09-06",
       "date_source": "git",
       "ticker": ""
@@ -1877,7 +1879,7 @@
       "bucket": "专题",
       "group": "大模型全景对比-20260906",
       "series": "evidence",
-      "type": "横评对比",
+      "type": "底稿",
       "date": "2026-09-06",
       "date_source": "git",
       "ticker": ""
@@ -1888,7 +1890,7 @@
       "bucket": "专题",
       "group": "大模型全景对比-20260906",
       "series": "evidence",
-      "type": "横评对比",
+      "type": "底稿",
       "date": "2026-09-06",
       "date_source": "git",
       "ticker": ""
@@ -1899,7 +1901,7 @@
       "bucket": "专题",
       "group": "大模型全景对比-20260906",
       "series": "evidence",
-      "type": "横评对比",
+      "type": "底稿",
       "date": "2026-09-06",
       "date_source": "git",
       "ticker": ""
@@ -1910,7 +1912,7 @@
       "bucket": "专题",
       "group": "大模型全景对比-20260906",
       "series": "evidence",
-      "type": "横评对比",
+      "type": "底稿",
       "date": "2026-09-06",
       "date_source": "git",
       "ticker": ""
@@ -1921,7 +1923,7 @@
       "bucket": "专题",
       "group": "大模型全景对比-20260906",
       "series": "evidence",
-      "type": "横评对比",
+      "type": "底稿",
       "date": "2026-09-06",
       "date_source": "git",
       "ticker": ""
@@ -1932,7 +1934,7 @@
       "bucket": "专题",
       "group": "大模型全景对比-20260906",
       "series": "evidence",
-      "type": "横评对比",
+      "type": "底稿",
       "date": "2026-09-06",
       "date_source": "git",
       "ticker": ""
@@ -1943,7 +1945,7 @@
       "bucket": "专题",
       "group": "大模型全景对比-20260906",
       "series": "evidence",
-      "type": "横评对比",
+      "type": "底稿",
       "date": "2026-09-06",
       "date_source": "git",
       "ticker": ""
@@ -1954,7 +1956,7 @@
       "bucket": "专题",
       "group": "大模型全景对比-20260906",
       "series": "evidence",
-      "type": "横评对比",
+      "type": "底稿",
       "date": "2026-09-06",
       "date_source": "git",
       "ticker": ""
@@ -1965,7 +1967,7 @@
       "bucket": "专题",
       "group": "大模型全景对比-20260906",
       "series": "evidence",
-      "type": "横评对比",
+      "type": "底稿",
       "date": "2026-09-06",
       "date_source": "git",
       "ticker": ""
@@ -1976,7 +1978,7 @@
       "bucket": "专题",
       "group": "大模型全景对比-20260906",
       "series": "evidence",
-      "type": "横评对比",
+      "type": "底稿",
       "date": "2026-09-06",
       "date_source": "git",
       "ticker": ""
@@ -1987,7 +1989,7 @@
       "bucket": "专题",
       "group": "大模型全景对比-20260906",
       "series": "evidence",
-      "type": "横评对比",
+      "type": "底稿",
       "date": "2026-09-06",
       "date_source": "git",
       "ticker": ""
@@ -1998,7 +2000,7 @@
       "bucket": "专题",
       "group": "大模型全景对比-20260906",
       "series": "evidence",
-      "type": "横评对比",
+      "type": "底稿",
       "date": "2026-09-06",
       "date_source": "git",
       "ticker": ""
@@ -2009,7 +2011,7 @@
       "bucket": "专题",
       "group": "大模型全景对比-20260906",
       "series": "evidence",
-      "type": "横评对比",
+      "type": "底稿",
       "date": "2026-09-06",
       "date_source": "git",
       "ticker": ""
@@ -2020,7 +2022,7 @@
       "bucket": "专题",
       "group": "大模型全景对比-20260906",
       "series": "evidence",
-      "type": "横评对比",
+      "type": "底稿",
       "date": "2026-09-06",
       "date_source": "git",
       "ticker": ""
@@ -2031,7 +2033,7 @@
       "bucket": "专题",
       "group": "大模型全景对比-20260906",
       "series": "evidence",
-      "type": "横评对比",
+      "type": "底稿",
       "date": "2026-09-06",
       "date_source": "git",
       "ticker": ""
@@ -2042,7 +2044,7 @@
       "bucket": "专题",
       "group": "大模型全景对比-20260906",
       "series": "evidence",
-      "type": "横评对比",
+      "type": "底稿",
       "date": "2026-09-06",
       "date_source": "git",
       "ticker": ""
@@ -2053,7 +2055,7 @@
       "bucket": "专题",
       "group": "大模型全景对比-20260906",
       "series": "evidence",
-      "type": "横评对比",
+      "type": "底稿",
       "date": "2026-09-06",
       "date_source": "git",
       "ticker": ""
@@ -2064,7 +2066,7 @@
       "bucket": "专题",
       "group": "大模型全景对比-20260906",
       "series": "evidence",
-      "type": "横评对比",
+      "type": "底稿",
       "date": "2026-09-06",
       "date_source": "git",
       "ticker": ""
@@ -2075,7 +2077,7 @@
       "bucket": "专题",
       "group": "大模型全景对比-20260906",
       "series": "evidence",
-      "type": "横评对比",
+      "type": "底稿",
       "date": "2026-09-06",
       "date_source": "git",
       "ticker": ""
@@ -2086,7 +2088,7 @@
       "bucket": "专题",
       "group": "大模型全景对比-20260906",
       "series": "evidence",
-      "type": "横评对比",
+      "type": "底稿",
       "date": "2026-09-06",
       "date_source": "git",
       "ticker": ""
@@ -2097,7 +2099,7 @@
       "bucket": "专题",
       "group": "大模型全景对比-20260906",
       "series": "evidence",
-      "type": "横评对比",
+      "type": "底稿",
       "date": "2026-09-06",
       "date_source": "git",
       "ticker": ""
@@ -2108,7 +2110,7 @@
       "bucket": "专题",
       "group": "大模型全景对比-20260906",
       "series": "evidence",
-      "type": "横评对比",
+      "type": "底稿",
       "date": "2026-09-06",
       "date_source": "git",
       "ticker": ""
@@ -2119,7 +2121,7 @@
       "bucket": "专题",
       "group": "大模型全景对比-20260906",
       "series": "evidence",
-      "type": "横评对比",
+      "type": "底稿",
       "date": "2026-09-06",
       "date_source": "git",
       "ticker": ""
@@ -2130,7 +2132,7 @@
       "bucket": "专题",
       "group": "大模型全景对比-20260906",
       "series": "evidence",
-      "type": "横评对比",
+      "type": "底稿",
       "date": "2026-09-06",
       "date_source": "git",
       "ticker": ""
@@ -2141,7 +2143,7 @@
       "bucket": "专题",
       "group": "大模型全景对比-20260906",
       "series": "evidence",
-      "type": "横评对比",
+      "type": "底稿",
       "date": "2026-09-06",
       "date_source": "git",
       "ticker": ""
@@ -2152,7 +2154,7 @@
       "bucket": "专题",
       "group": "大模型全景对比-20260906",
       "series": "evidence",
-      "type": "横评对比",
+      "type": "底稿",
       "date": "2026-09-06",
       "date_source": "git",
       "ticker": ""
@@ -2163,7 +2165,7 @@
       "bucket": "专题",
       "group": "大模型全景对比-20260906",
       "series": "evidence",
-      "type": "横评对比",
+      "type": "底稿",
       "date": "2026-09-06",
       "date_source": "git",
       "ticker": ""
@@ -2174,7 +2176,7 @@
       "bucket": "专题",
       "group": "大模型全景对比-20260906",
       "series": "evidence",
-      "type": "横评对比",
+      "type": "底稿",
       "date": "2026-09-06",
       "date_source": "git",
       "ticker": ""
@@ -2185,7 +2187,7 @@
       "bucket": "专题",
       "group": "大模型全景对比-20260906",
       "series": "evidence",
-      "type": "横评对比",
+      "type": "底稿",
       "date": "2026-09-06",
       "date_source": "git",
       "ticker": ""
@@ -2196,7 +2198,7 @@
       "bucket": "专题",
       "group": "大模型全景对比-20260906",
       "series": "evidence",
-      "type": "横评对比",
+      "type": "底稿",
       "date": "2026-09-06",
       "date_source": "git",
       "ticker": ""
@@ -2207,7 +2209,7 @@
       "bucket": "专题",
       "group": "大模型全景对比-20260906",
       "series": "evidence",
-      "type": "横评对比",
+      "type": "底稿",
       "date": "2026-09-06",
       "date_source": "git",
       "ticker": ""
@@ -2218,7 +2220,7 @@
       "bucket": "专题",
       "group": "大模型全景对比-20260906",
       "series": "evidence",
-      "type": "横评对比",
+      "type": "底稿",
       "date": "2026-09-06",
       "date_source": "git",
       "ticker": ""
@@ -2229,7 +2231,7 @@
       "bucket": "专题",
       "group": "大模型全景对比-20260906",
       "series": "",
-      "type": "横评对比",
+      "type": "底稿",
       "date": "2026-09-06",
       "date_source": "文件名",
       "ticker": ""
@@ -2317,7 +2319,7 @@
       "bucket": "专题",
       "group": "七公司商业质量与十年利润-20260906",
       "series": "泡泡MiniMax证据",
-      "type": "研究",
+      "type": "底稿",
       "date": "2026-09-06",
       "date_source": "正文",
       "ticker": ""
@@ -2372,7 +2374,7 @@
       "bucket": "专题",
       "group": "七公司五年回报与资金配置-20260906",
       "series": "腾讯拼多多证据",
-      "type": "研究",
+      "type": "底稿",
       "date": "2026-09-06",
       "date_source": "正文",
       "ticker": ""
@@ -2405,7 +2407,7 @@
       "bucket": "专题",
       "group": "七公司五年回报与资金配置-20260906",
       "series": "泡泡MiniMax五年证据",
-      "type": "研究",
+      "type": "底稿",
       "date": "2026-09-06",
       "date_source": "正文",
       "ticker": ""
@@ -2449,7 +2451,7 @@
       "bucket": "专题",
       "group": "RSI-survey-20260906",
       "series": "research",
-      "type": "研究",
+      "type": "底稿",
       "date": "2026-09-06",
       "date_source": "正文",
       "ticker": ""
@@ -2460,7 +2462,7 @@
       "bucket": "专题",
       "group": "RSI-survey-20260906",
       "series": "research",
-      "type": "研究",
+      "type": "底稿",
       "date": "2026-09-06",
       "date_source": "正文",
       "ticker": ""
@@ -2471,7 +2473,7 @@
       "bucket": "专题",
       "group": "RSI-survey-20260906",
       "series": "research",
-      "type": "研究",
+      "type": "底稿",
       "date": "2026-09-06",
       "date_source": "正文",
       "ticker": ""
@@ -2482,7 +2484,7 @@
       "bucket": "专题",
       "group": "RSI-survey-20260906",
       "series": "research",
-      "type": "研究",
+      "type": "底稿",
       "date": "2026-09-06",
       "date_source": "正文",
       "ticker": ""
@@ -2548,7 +2550,7 @@
       "bucket": "专题",
       "group": "AI产业研究",
       "series": "中美基模公司终局与MiniMax差异化研究报告-20260906-核查",
-      "type": "研究",
+      "type": "底稿",
       "date": "2026-09-06",
       "date_source": "文件名",
       "ticker": ""
@@ -2999,7 +3001,7 @@
       "bucket": "公司",
       "group": "快手",
       "series": "《看懂快手》-20260822",
-      "type": "深度系列",
+      "type": "底稿",
       "date": "2026-08-22",
       "date_source": "文件名",
       "ticker": ""
@@ -3010,7 +3012,7 @@
       "bucket": "公司",
       "group": "快手",
       "series": "《看懂快手》-20260822",
-      "type": "深度系列",
+      "type": "底稿",
       "date": "2026-08-22",
       "date_source": "文件名",
       "ticker": ""
@@ -3032,7 +3034,7 @@
       "bucket": "公司",
       "group": "快手",
       "series": "《看懂快手》-20260822",
-      "type": "深度系列",
+      "type": "底稿",
       "date": "2026-08-22",
       "date_source": "文件名",
       "ticker": ""
@@ -3043,7 +3045,7 @@
       "bucket": "公司",
       "group": "快手",
       "series": "《看懂快手》-20260822",
-      "type": "深度系列",
+      "type": "底稿",
       "date": "2026-08-22",
       "date_source": "文件名",
       "ticker": ""
@@ -3054,7 +3056,7 @@
       "bucket": "公司",
       "group": "快手",
       "series": "《看懂快手》-20260822",
-      "type": "财报",
+      "type": "底稿",
       "date": "2026-08-22",
       "date_source": "文件名",
       "ticker": ""
@@ -3065,7 +3067,7 @@
       "bucket": "公司",
       "group": "快手",
       "series": "《看懂快手》-20260822",
-      "type": "深度系列",
+      "type": "底稿",
       "date": "2026-08-22",
       "date_source": "文件名",
       "ticker": ""
@@ -3120,7 +3122,7 @@
       "bucket": "公司",
       "group": "快手",
       "series": "《看懂快手》-20260822",
-      "type": "深度系列",
+      "type": "底稿",
       "date": "2026-08-22",
       "date_source": "文件名",
       "ticker": ""
@@ -3186,7 +3188,7 @@
       "bucket": "公司",
       "group": "五粮液",
       "series": "《看懂五粮液》-20260822",
-      "type": "深度系列",
+      "type": "底稿",
       "date": "2026-08-22",
       "date_source": "文件名",
       "ticker": ""
@@ -3252,7 +3254,7 @@
       "bucket": "公司",
       "group": "快手",
       "series": "《看懂快手》-20260819",
-      "type": "深度系列",
+      "type": "底稿",
       "date": "2026-08-19",
       "date_source": "文件名",
       "ticker": ""
@@ -3263,7 +3265,7 @@
       "bucket": "公司",
       "group": "快手",
       "series": "《看懂快手》-20260819",
-      "type": "深度系列",
+      "type": "底稿",
       "date": "2026-08-19",
       "date_source": "文件名",
       "ticker": ""
@@ -3296,7 +3298,7 @@
       "bucket": "公司",
       "group": "快手",
       "series": "《看懂快手》-20260819",
-      "type": "深度系列",
+      "type": "底稿",
       "date": "2026-08-19",
       "date_source": "文件名",
       "ticker": ""
@@ -3769,7 +3771,7 @@
       "bucket": "公司",
       "group": "快手",
       "series": "《看懂快手》-20260802",
-      "type": "深度系列",
+      "type": "底稿",
       "date": "2026-08-02",
       "date_source": "文件名",
       "ticker": ""
@@ -3835,7 +3837,7 @@
       "bucket": "公司",
       "group": "阿里巴巴",
       "series": "《看懂阿里巴巴》-20260801",
-      "type": "深度系列",
+      "type": "底稿",
       "date": "2026-08-01",
       "date_source": "文件名",
       "ticker": ""
@@ -3846,7 +3848,7 @@
       "bucket": "公司",
       "group": "英伟达",
       "series": "《看懂英伟达》-20260801",
-      "type": "深度系列",
+      "type": "底稿",
       "date": "2026-08-01",
       "date_source": "文件名",
       "ticker": ""
@@ -3912,7 +3914,7 @@
       "bucket": "公司",
       "group": "英伟达",
       "series": "《看懂英伟达》-20260801",
-      "type": "深度系列",
+      "type": "底稿",
       "date": "2026-08-01",
       "date_source": "文件名",
       "ticker": ""
@@ -3978,7 +3980,7 @@
       "bucket": "公司",
       "group": "理想汽车",
       "series": "《看懂理想汽车》-20260801",
-      "type": "深度系列",
+      "type": "底稿",
       "date": "2026-08-01",
       "date_source": "文件名",
       "ticker": ""
@@ -4319,7 +4321,7 @@
       "bucket": "公司",
       "group": "英伟达",
       "series": "《看懂英伟达》-20260714",
-      "type": "深度系列",
+      "type": "底稿",
       "date": "2026-07-14",
       "date_source": "正文",
       "ticker": ""
@@ -4330,7 +4332,7 @@
       "bucket": "公司",
       "group": "英伟达",
       "series": "《看懂英伟达》-20260714",
-      "type": "深度系列",
+      "type": "底稿",
       "date": "2026-07-14",
       "date_source": "正文",
       "ticker": ""
@@ -4341,7 +4343,7 @@
       "bucket": "公司",
       "group": "英伟达",
       "series": "《看懂英伟达》-20260714",
-      "type": "深度系列",
+      "type": "底稿",
       "date": "2026-07-14",
       "date_source": "正文",
       "ticker": ""
@@ -4352,7 +4354,7 @@
       "bucket": "公司",
       "group": "英伟达",
       "series": "《看懂英伟达》-20260714",
-      "type": "深度系列",
+      "type": "底稿",
       "date": "2026-07-14",
       "date_source": "正文",
       "ticker": ""
@@ -4363,7 +4365,7 @@
       "bucket": "公司",
       "group": "英伟达",
       "series": "《看懂英伟达》-20260714",
-      "type": "深度系列",
+      "type": "底稿",
       "date": "2026-07-14",
       "date_source": "正文",
       "ticker": ""
@@ -4374,7 +4376,7 @@
       "bucket": "公司",
       "group": "英伟达",
       "series": "《看懂英伟达》-20260714",
-      "type": "深度系列",
+      "type": "底稿",
       "date": "2026-07-14",
       "date_source": "正文",
       "ticker": ""
@@ -4440,7 +4442,7 @@
       "bucket": "公司",
       "group": "英伟达",
       "series": "《看懂英伟达》-20260714",
-      "type": "深度系列",
+      "type": "底稿",
       "date": "2026-07-14",
       "date_source": "文件名",
       "ticker": ""
@@ -4572,7 +4574,7 @@
       "bucket": "公司",
       "group": "智谱",
       "series": "《看懂智谱AI》-20260714",
-      "type": "深度系列",
+      "type": "底稿",
       "date": "2026-07-14",
       "date_source": "文件名",
       "ticker": ""
@@ -4627,7 +4629,7 @@
       "bucket": "公司",
       "group": "蚂蚁数科",
       "series": "《看懂蚂蚁数科》",
-      "type": "深度系列",
+      "type": "底稿",
       "date": "2026-07-13",
       "date_source": "git",
       "ticker": ""
@@ -5166,7 +5168,7 @@
       "bucket": "公司",
       "group": "晶泰科技",
       "series": "《看懂晶泰科技》",
-      "type": "深度系列",
+      "type": "底稿",
       "date": "2026-07-13",
       "date_source": "git",
       "ticker": ""
@@ -5485,7 +5487,7 @@
       "bucket": "公司",
       "group": "快手",
       "series": "《看懂快手》-20260711",
-      "type": "深度系列",
+      "type": "底稿",
       "date": "2026-07-11",
       "date_source": "文件名",
       "ticker": ""
@@ -6805,7 +6807,7 @@
       "bucket": "公司",
       "group": "阿里巴巴",
       "series": "《看懂阿里巴巴》",
-      "type": "深度系列",
+      "type": "底稿",
       "date": "2026-06-24",
       "date_source": "git",
       "ticker": ""
@@ -7652,7 +7654,7 @@
       "bucket": "公司",
       "group": "Marvell",
       "series": "",
-      "type": "研究",
+      "type": "底稿",
       "date": "2026-06-23",
       "date_source": "正文",
       "ticker": ""
@@ -7784,7 +7786,7 @@
       "bucket": "公司",
       "group": "阿里巴巴",
       "series": "《看懂阿里巴巴》",
-      "type": "深度系列",
+      "type": "底稿",
       "date": "2026-06-23",
       "date_source": "git",
       "ticker": ""
@@ -13460,7 +13462,7 @@
       "bucket": "公司",
       "group": "美团",
       "series": "《看懂美团》",
-      "type": "深度系列",
+      "type": "底稿",
       "date": "2026-05-23",
       "date_source": "git",
       "ticker": ""
@@ -13691,7 +13693,7 @@
       "bucket": "公司",
       "group": "蚂蚁集团",
       "series": "《看懂蚂蚁集团》",
-      "type": "深度系列",
+      "type": "底稿",
       "date": "2026-05-22",
       "date_source": "git",
       "ticker": ""
@@ -13856,7 +13858,7 @@
       "bucket": "公司",
       "group": "英伟达",
       "series": "《看懂英伟达》",
-      "type": "深度系列",
+      "type": "底稿",
       "date": "2026-05-22",
       "date_source": "git",
       "ticker": ""
@@ -13966,7 +13968,7 @@
       "bucket": "公司",
       "group": "百度",
       "series": "《看懂百度》",
-      "type": "深度系列",
+      "type": "底稿",
       "date": "2026-05-22",
       "date_source": "git",
       "ticker": ""
@@ -14054,7 +14056,7 @@
       "bucket": "公司",
       "group": "理想汽车",
       "series": "《看懂理想汽车》",
-      "type": "深度系列",
+      "type": "底稿",
       "date": "2026-05-22",
       "date_source": "git",
       "ticker": ""
@@ -14164,7 +14166,7 @@
       "bucket": "公司",
       "group": "海尔智家",
       "series": "《看懂海尔智家》",
-      "type": "深度系列",
+      "type": "底稿",
       "date": "2026-05-22",
       "date_source": "git",
       "ticker": ""
@@ -14186,7 +14188,7 @@
       "bucket": "公司",
       "group": "泸州老窖",
       "series": "《看懂泸州老窖》",
-      "type": "深度系列",
+      "type": "底稿",
       "date": "2026-05-22",
       "date_source": "git",
       "ticker": ""
@@ -14461,7 +14463,7 @@
       "bucket": "公司",
       "group": "平安集团",
       "series": "《看懂平安集团》",
-      "type": "深度系列",
+      "type": "底稿",
       "date": "2026-05-22",
       "date_source": "git",
       "ticker": ""
@@ -14659,7 +14661,7 @@
       "bucket": "公司",
       "group": "众安在线",
       "series": "《看懂众安在线》",
-      "type": "深度系列",
+      "type": "底稿",
       "date": "2026-05-22",
       "date_source": "git",
       "ticker": ""
@@ -14758,7 +14760,7 @@
       "bucket": "公司",
       "group": "lululemon",
       "series": "《看懂lululemon》",
-      "type": "深度系列",
+      "type": "底稿",
       "date": "2026-05-22",
       "date_source": "git",
       "ticker": ""
@@ -14802,7 +14804,7 @@
       "bucket": "公司",
       "group": "Uber",
       "series": "《看懂Uber》",
-      "type": "深度系列",
+      "type": "底稿",
       "date": "2026-05-22",
       "date_source": "git",
       "ticker": ""
@@ -15231,7 +15233,7 @@
       "bucket": "公司",
       "group": "长光辰芯",
       "series": "《看懂长光辰芯》",
-      "type": "深度系列",
+      "type": "底稿",
       "date": "2026-05-21",
       "date_source": "git",
       "ticker": ""
@@ -15242,7 +15244,7 @@
       "bucket": "公司",
       "group": "茅台",
       "series": "《看懂茅台》",
-      "type": "深度系列",
+      "type": "底稿",
       "date": "2026-05-21",
       "date_source": "git",
       "ticker": ""
@@ -15286,7 +15288,7 @@
       "bucket": "公司",
       "group": "耳朵时间",
       "series": "《看懂耳朵时间》",
-      "type": "深度系列",
+      "type": "底稿",
       "date": "2026-05-21",
       "date_source": "git",
       "ticker": ""
@@ -15308,7 +15310,7 @@
       "bucket": "公司",
       "group": "生数科技",
       "series": "《看懂生数科技》",
-      "type": "深度系列",
+      "type": "底稿",
       "date": "2026-05-21",
       "date_source": "git",
       "ticker": ""
@@ -15319,7 +15321,7 @@
       "bucket": "公司",
       "group": "灵境万维",
       "series": "《看懂灵境万维》",
-      "type": "深度系列",
+      "type": "底稿",
       "date": "2026-05-21",
       "date_source": "git",
       "ticker": ""
@@ -15341,7 +15343,7 @@
       "bucket": "公司",
       "group": "永新股份",
       "series": "《看懂永新股份》",
-      "type": "深度系列",
+      "type": "底稿",
       "date": "2026-05-21",
       "date_source": "git",
       "ticker": ""
@@ -15363,7 +15365,7 @@
       "bucket": "公司",
       "group": "暖哇科技",
       "series": "《看懂暖哇科技》",
-      "type": "深度系列",
+      "type": "底稿",
       "date": "2026-05-21",
       "date_source": "git",
       "ticker": ""
@@ -15374,7 +15376,7 @@
       "bucket": "公司",
       "group": "智元机器人",
       "series": "《看懂智元机器人》",
-      "type": "深度系列",
+      "type": "底稿",
       "date": "2026-05-21",
       "date_source": "git",
       "ticker": ""
@@ -15396,7 +15398,7 @@
       "bucket": "公司",
       "group": "思格新能",
       "series": "《看懂思格新能》",
-      "type": "深度系列",
+      "type": "底稿",
       "date": "2026-05-21",
       "date_source": "git",
       "ticker": ""
@@ -15407,7 +15409,7 @@
       "bucket": "公司",
       "group": "宇树科技",
       "series": "《看懂宇树科技》",
-      "type": "深度系列",
+      "type": "底稿",
       "date": "2026-05-21",
       "date_source": "git",
       "ticker": ""
@@ -15418,7 +15420,7 @@
       "bucket": "公司",
       "group": "五粮液",
       "series": "《看懂五粮液》",
-      "type": "深度系列",
+      "type": "底稿",
       "date": "2026-05-21",
       "date_source": "git",
       "ticker": ""
@@ -15451,7 +15453,7 @@
       "bucket": "公司",
       "group": "Mastercard",
       "series": "《看懂万事达卡》",
-      "type": "深度系列",
+      "type": "底稿",
       "date": "2026-05-21",
       "date_source": "git",
       "ticker": ""
@@ -15528,7 +15530,7 @@
       "bucket": "公司",
       "group": "腾讯音乐",
       "series": "《看懂TME》",
-      "type": "深度系列",
+      "type": "底稿",
       "date": "2026-05-19",
       "date_source": "git",
       "ticker": ""
@@ -15616,7 +15618,7 @@
       "bucket": "公司",
       "group": "网易",
       "series": "《看懂网易》",
-      "type": "深度系列",
+      "type": "底稿",
       "date": "2026-05-19",
       "date_source": "git",
       "ticker": ""
@@ -22095,7 +22097,7 @@
       "bucket": "公司",
       "group": "泡泡玛特",
       "series": "",
-      "type": "底稿",
+      "type": "研究",
       "date": "2026-05-16",
       "date_source": "文件名",
       "ticker": ""
@@ -22744,7 +22746,7 @@
       "bucket": "公司",
       "group": "拼多多",
       "series": "《看懂拼多多》",
-      "type": "深度系列",
+      "type": "底稿",
       "date": "2026-05-15",
       "date_source": "git",
       "ticker": ""
@@ -23525,7 +23527,7 @@
       "bucket": "公司",
       "group": "腾讯",
       "series": "《看懂腾讯》",
-      "type": "深度系列",
+      "type": "底稿",
       "date": "2026-05-05",
       "date_source": "正文",
       "ticker": ""
@@ -25670,7 +25672,7 @@
       "bucket": "公司",
       "group": "美团",
       "series": "",
-      "type": "底稿",
+      "type": "研究",
       "date": "2026-04-11",
       "date_source": "文件名",
       "ticker": ""
@@ -26616,7 +26618,7 @@
       "bucket": "专题",
       "group": "综合与横评",
       "series": "",
-      "type": "底稿",
+      "type": "横评对比",
       "date": "2026-04-08",
       "date_source": "文件名",
       "ticker": ""

@@ -16,7 +16,7 @@
 
 <!-- REPORTS-BANNER:START 由 tools/reports_index.py 自动更新，勿手改 -->
 
-> 📊 **日更内容是研究报告，全部在 [研究报告索引](reports/README.md)。** 2436 份报告 · 108 家公司 · 28 个专题，按公司与专题分组，更新至 2026-10-19。
+> 📊 **日更内容是研究报告，全部在 [研究报告索引](reports/README.md)。** 2246 份报告 · 108 家公司 · 26 个专题，按公司与专题分组，更新至 2026-10-19。
 
 <!-- REPORTS-BANNER:END -->
 
@@ -659,14 +659,15 @@ REM 可选：安装 Codex slash prompts
 
 <!-- REPORTS-INDEX:START 由 tools/reports_index.py 自动更新，勿手改 -->
 
-**📊 [全部研究索引 →](reports/README.md)** ｜ 2436 份报告 · 108 家公司 · 28 个专题 · 更新至 2026-10-19
+**📊 [全部研究索引 →](reports/README.md)** ｜ 2246 份报告 · 108 家公司 · 26 个专题 · 更新至 2026-10-19
 
 最近更新：
 
 | 日期 | 报告 | 归属 |
 |------|------|------|
-| 2026-10-19 | [七姐妹股份、非经常损益与净现金桥接复核](reports/美股七姐妹-investment-team-20261019/evidence/shares-assets-review.md) | 美股七姐妹-investment-team |
-| 2026-10-19 | [美股七姐妹财务口径独立复核](reports/美股七姐妹-investment-team-20261019/evidence/price-and-calendar-review.md) | 美股七姐妹-investment-team |
+| 2026-10-19 | [特斯拉（TSLA）独立投资研究：特斯拉已有汽车、储能和有限无人运营业务，但当前市值主要依靠尚未完整证明的自动驾驶与新业务现金](reports/美股七姐妹-investment-team-20261019/07-特斯拉-TSLA-研究报告.md) | 美股七姐妹-investment-team |
+| 2026-10-19 | [英伟达（NVDA）独立投资研究：英伟达仍拥有最强的AI计算系统优势之一，但不能再按完全不承担客户资本风险的供应商估值](reports/美股七姐妹-investment-team-20261019/06-英伟达-NVDA-研究报告.md) | 美股七姐妹-investment-team |
+| 2026-10-19 | [Alphabet（谷歌）独立投资研究报告](reports/美股七姐妹-20261019/谷歌/谷歌投资研究报告-20261019.md) | 美股七姐妹 |
 
 <!-- REPORTS-INDEX:END -->
 
