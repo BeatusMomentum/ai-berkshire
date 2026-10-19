@@ -353,6 +353,7 @@ ul.work li>a{font-weight:400;font-size:.95rem}
 .wx{display:flex;gap:1rem;align-items:center;margin:2.4rem 0 1rem;padding:1rem;background:var(--card);
 border:1px solid var(--line);border-radius:var(--radius)}.wx img{width:92px;height:92px;border-radius:6px;flex-shrink:0}
 .wx b{display:block;font-size:1rem}.wx span{color:var(--muted);font-size:.86rem}
+.wxline{margin:2.4rem 0 .6rem;padding-top:.8rem;border-top:1px solid var(--line);color:var(--muted);font-size:.85rem}
 .intro{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:1rem 1.2rem;margin:1rem 0 1.4rem}
 .intro p{margin:.3rem 0}
 .layers{display:grid;grid-template-columns:repeat(auto-fit,minmax(12rem,1fr));gap:.8rem;margin:1rem 0}
@@ -623,7 +624,8 @@ def build(out_dir):
         if toc:
             head += '<details class="toc"><summary>目录</summary>%s</details>' % toc
         tail = ""
-        tail += WECHAT_CARD % "../"
+        tail += ('<p class="wxline">精选研究与报告之外的判断，首发在公众号「复利炼丹炉」'
+                 ' · <a href="../about.html">扫码关注</a></p>')
         if it.get("_work"):
             tail += ('<h2>底稿与核验（GitHub）</h2><div class="meta">这些文件不在阅读站上展示，点开为 GitHub 原文。</div>'
                      '<ul class="list work">%s</ul>') % "".join(
