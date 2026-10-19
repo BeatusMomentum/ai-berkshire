@@ -429,6 +429,11 @@ def about_page(n_reports, n_companies, n_wechat, updated):
 <p>研究技能、使用说明和全部报告原稿都在 <a href="%(repo)s">GitHub</a>，按仓库首页的"快速开始"装好即可在 Claude Code 或 Codex 里调用。
 欢迎提 issue 和改进建议。</p>
 
+<h2>官方渠道</h2>
+<p>本项目只有三个官方渠道：GitHub 仓库 <a href="%(repo)s">xbtlin/ai-berkshire</a>、本站、微信公众号「复利炼丹炉」。</p>
+<p><b>不收费、不荐股、不带单、不建投资群，也不以任何形式收款。</b>ai-berkshire.com、aiberkshire.com 等域名由他人注册，与本项目无关。
+凡以 AI Berkshire 名义拉群、收费、推荐个股的，都不是本人。</p>
+
 <h2>免责声明</h2>
 <p class="meta">本站内容是个人研究记录，不构成任何投资建议。报告中的判断可能有误，数据以公司公告原件为准。投资有风险，决策请独立判断。</p>
 """ % {"n": n_reports, "c": n_companies, "w": n_wechat, "u": updated, "repo": REPO_URL, "card": WECHAT_CARD % ""}
