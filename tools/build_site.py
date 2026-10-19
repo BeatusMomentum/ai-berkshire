@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""把仓库里已入库的报告生成一个适合墨水屏阅读的静态站点。
+"""把仓库里已入库的报告生成静态阅读站点，兼容电脑、手机与墨水屏阅读器。
 
 输入：reports/index.json（由 tools/reports_index.py 生成）、投资炼丹/、实盘记录/ 下已纳入 Git 的 Markdown。
 输出：site/ 目录，纯 HTML，无框架；按公司、专题、时间、类型、公众号发表五个维度建索引，另有站内搜索与 RSS。
@@ -183,68 +183,124 @@ def git_date(path):
 # ---------- HTML 外壳 ----------
 
 CSS = """
-html{font-size:20px;-webkit-text-size-adjust:100%}
-body{margin:0 auto;padding:0 1rem 3rem;max-width:44rem;color:#000;background:#fff;
-font-family:-apple-system,"PingFang SC","Hiragino Sans GB","Noto Sans CJK SC","Source Han Sans SC","Microsoft YaHei",sans-serif;line-height:1.75}
-html.s1{font-size:17px}html.s3{font-size:24px}html.s4{font-size:28px}
-a{color:#000;text-decoration:underline;text-underline-offset:3px}
-nav.top{padding:.7rem 0;border-bottom:3px solid #000;font-size:.95rem;line-height:2.2}
-nav.top a{margin-right:.9rem;white-space:nowrap}
-nav.top .size{float:right}nav.top .size a{margin:0 0 0 .4rem;text-decoration:none;border:1px solid #000;padding:0 .4rem}
-.crumb{font-size:.85rem;color:#333;margin:.8rem 0 0}
-h1{font-size:1.55rem;line-height:1.35;margin:.8rem 0 .4rem}
-h2{font-size:1.25rem;line-height:1.4;border-bottom:1px solid #777;padding-bottom:.15rem;margin-top:1.8rem}
-h3{font-size:1.08rem;margin-top:1.4rem}
-.meta{color:#333;font-size:.85rem;margin:.2rem 0 1rem}
-ul.list{list-style:none;padding:0;margin:0}
-ul.list li{padding:.65rem 0;border-bottom:1px solid #bbb}
-ul.list li a{display:block}
-ul.list .meta{margin:0}
-.grid a.btn{display:inline-block;border:2px solid #000;padding:.45rem .9rem;margin:.3rem .6rem .3rem 0;text-decoration:none;font-weight:600}
-.table-wrap{overflow-x:auto;margin:1rem 0}
-table{border-collapse:collapse;font-size:.82rem;line-height:1.45}
-th,td{border:1px solid #555;padding:.3rem .5rem;vertical-align:top;text-align:left}
-th{background:#e8e8e8}
-blockquote{border-left:4px solid #000;margin:1rem 0;padding:.1rem 1rem;color:#111}
-pre{overflow-x:auto;border:1px solid #888;padding:.6rem;font-size:.8rem;line-height:1.4}
-code{font-size:.9em}
-img{max-width:100%;height:auto}
-hr{border:0;border-top:1px solid #888}
-.idx{columns:2;column-gap:2rem}
-.idx li{break-inside:avoid}
-details{margin:.6rem 0}summary{cursor:pointer;padding:.4rem 0;font-weight:600}
-footer{margin-top:3rem;border-top:3px solid #000;padding-top:.8rem;font-size:.85rem;color:#333}
-input.q{font-size:1.1rem;width:100%;padding:.5rem;border:2px solid #000;box-sizing:border-box}
-@media (max-width:600px){html{font-size:18px}.idx{columns:1}}
+:root{--bg:#fbfbf9;--card:#fff;--fg:#1f2328;--muted:#656d76;--line:#e3e4e2;--accent:#0b5cad;--accent-bg:#eaf2fb;
+--th:#f3f4f2;--code:#f3f4f2;--shadow:0 1px 2px rgba(0,0,0,.05);--radius:10px;--w:46rem;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme]){--bg:#15171a;--card:#1c1f23;--fg:#e6e6e3;--muted:#9aa1a9;
+--line:#2d3136;--accent:#6cb0ff;--accent-bg:#1d2a3a;--th:#23272c;--code:#23272c;--shadow:none;color-scheme:dark}}
+:root[data-theme=dark]{--bg:#15171a;--card:#1c1f23;--fg:#e6e6e3;--muted:#9aa1a9;--line:#2d3136;--accent:#6cb0ff;
+--accent-bg:#1d2a3a;--th:#23272c;--code:#23272c;--shadow:none;color-scheme:dark}
+html{font-size:17px;-webkit-text-size-adjust:100%}
+html[data-size=s1]{font-size:15px}html[data-size=s3]{font-size:19px}html[data-size=s4]{font-size:22px}
+*{box-sizing:border-box}
+body{margin:0;color:var(--fg);background:var(--bg);line-height:1.8;
+font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Noto Sans CJK SC","Source Han Sans SC","Microsoft YaHei",sans-serif}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+header.top{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);
+-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar{max-width:72rem;margin:0 auto;padding:0 1rem;display:flex;align-items:center;gap:1rem;height:3.2rem}
+.brand{font-weight:700;color:var(--fg);white-space:nowrap}
+nav.main{display:flex;gap:.2rem;overflow-x:auto;scrollbar-width:none;flex:1;min-width:0}nav.main::-webkit-scrollbar{display:none}
+nav.main a{color:var(--fg);padding:.3rem .65rem;border-radius:6px;white-space:nowrap;font-size:.93rem}
+nav.main a:hover,nav.main a.on{background:var(--accent-bg);color:var(--accent);text-decoration:none}
+.tools{display:flex;gap:.3rem;white-space:nowrap;flex-shrink:0}
+.tools button{font:inherit;font-size:.82rem;color:var(--fg);background:var(--card);border:1px solid var(--line);
+border-radius:6px;padding:.15rem .5rem;cursor:pointer}
+.tools select{font:inherit;font-size:.82rem;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;padding:.1rem .3rem}
+main{max-width:var(--w);margin:0 auto;padding:0 1rem 3rem;overflow-wrap:anywhere}
+main.wide{max-width:72rem}
+.crumb{font-size:.82rem;color:var(--muted);margin:1.2rem 0 0}.crumb a{color:var(--muted)}
+h1{font-size:1.75rem;line-height:1.35;margin:.8rem 0 .5rem;letter-spacing:.01em}
+h2{font-size:1.3rem;line-height:1.45;margin:2.2rem 0 .8rem;padding-bottom:.3rem;border-bottom:1px solid var(--line)}
+h3{font-size:1.08rem;margin:1.6rem 0 .5rem}
+.meta{color:var(--muted);font-size:.84rem;margin:.15rem 0 1rem}
+ul.list{list-style:none;padding:0;margin:0;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+ul.list li{padding:.75rem 1rem;border-bottom:1px solid var(--line)}ul.list li:last-child{border-bottom:0}
+ul.list li:hover{background:var(--accent-bg)}
+ul.list li>a{display:block;color:var(--fg);font-weight:500}ul.list li>a:hover{color:var(--accent);text-decoration:none}
+ul.list .meta{margin:.15rem 0 0}
+.grid{display:flex;flex-wrap:wrap;gap:.5rem;margin:.6rem 0}
+.grid a.btn{display:inline-block;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:.35rem .9rem;
+color:var(--fg);font-size:.92rem;box-shadow:var(--shadow)}
+.grid a.btn:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.hero>.grid:first-of-type a.btn{border-radius:var(--radius);padding:.7rem 1.1rem;font-weight:600}
+.idx{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:0}
+.idx li{border-bottom:1px solid var(--line)!important}
+article{font-size:1.02rem}
+article p{margin:.9rem 0}
+article a{text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+.table-wrap{overflow-x:auto;margin:1.2rem 0;border:1px solid var(--line);border-radius:var(--radius);background:var(--card)}
+table{border-collapse:collapse;font-size:.86rem;line-height:1.5;min-width:100%}
+th,td{border-bottom:1px solid var(--line);padding:.45rem .7rem;vertical-align:top;text-align:left}
+th{background:var(--th);font-weight:600;white-space:nowrap}
+tbody tr:nth-child(even){background:color-mix(in srgb,var(--th) 45%,transparent)}
+blockquote{border-left:3px solid var(--accent);margin:1.2rem 0;padding:.2rem 1rem;color:var(--muted);background:var(--card)}
+pre{overflow-x:auto;background:var(--code);border-radius:8px;padding:.8rem;font-size:.82rem;line-height:1.5}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.88em;background:var(--code);padding:.1em .3em;border-radius:4px}
+pre code{background:none;padding:0}
+img{max-width:100%;height:auto;border-radius:6px}
+hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+details.toc{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:.2rem 1rem;margin:1rem 0}
+summary{cursor:pointer;padding:.5rem 0;font-weight:600}
+.toc ul{padding-left:1.1rem;margin:.2rem 0 .6rem;font-size:.9rem;line-height:1.7}
+.toc a{color:var(--fg)}
+.layout{display:block}
+aside.side{display:none}
+@media (min-width:1180px){main.doc{max-width:72rem}.layout{display:grid;grid-template-columns:minmax(0,46rem) 15rem;gap:3rem;justify-content:center}
+aside.side{display:block}aside.side .toc{position:sticky;top:4.5rem;max-height:calc(100vh - 6rem);overflow:auto;font-size:.85rem;
+border-left:1px solid var(--line);padding-left:1rem}aside.side .toc ul{padding-left:.8rem}
+details.toc{display:none}}
+.progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--accent);z-index:11}
+footer{max-width:72rem;margin:3rem auto 0;padding:1.2rem 1rem 2rem;border-top:1px solid var(--line);font-size:.82rem;color:var(--muted)}
+footer a{color:var(--muted);text-decoration:underline}
+input.q{font:inherit;font-size:1.05rem;width:100%;padding:.7rem 1rem;border:1px solid var(--line);border-radius:var(--radius);
+background:var(--card);color:var(--fg);outline:none}input.q:focus{border-color:var(--accent)}
+@media (max-width:640px){html{font-size:16px}h1{font-size:1.45rem}.bar{gap:.5rem;padding:0 .6rem}.brand{display:none}
+.tools .lbl{display:none}ul.list li{padding:.7rem .8rem}}
 """
 
-SIZE_JS = """
-(function(){var k='aib-size',h=document.documentElement;var s=localStorage.getItem(k);if(s)h.className=s;
-window.setSize=function(c){h.className=c;localStorage.setItem(k,c);return false;}})();
+PREF_JS = """
+(function(){var h=document.documentElement,g=function(k){try{return localStorage.getItem(k)}catch(e){return null}};
+var t=g('aib-theme'),s=g('aib-size');
+if(t&&t!=='auto')h.setAttribute('data-theme',t);if(s)h.setAttribute('data-size',s);
+var sz=['s1','','s3','s4'];
+window.aibSize=function(d){var c=h.getAttribute('data-size')||'',i=sz.indexOf(c);i=Math.max(0,Math.min(3,i+d));
+if(sz[i])h.setAttribute('data-size',sz[i]);else h.removeAttribute('data-size');try{localStorage.setItem('aib-size',sz[i])}catch(e){}};
+window.aibTheme=function(v){if(v==='auto')h.removeAttribute('data-theme');else h.setAttribute('data-theme',v);
+try{localStorage.setItem('aib-theme',v)}catch(e){}};
+document.addEventListener('DOMContentLoaded',function(){var sel=document.getElementById('theme');
+if(sel)sel.value=h.getAttribute('data-theme')||'auto';var bar=document.querySelector('.progress');
+if(bar){var f=function(){var d=document.documentElement,m=d.scrollHeight-d.clientHeight;bar.style.width=(m>0?d.scrollTop/m*100:0)+'%'};
+addEventListener('scroll',f,{passive:true});f()}});})();
 """
 
+NAV = [("index.html", "首页"), ("companies/index.html", "公司"), ("topics/index.html", "专题"),
+       ("dates/index.html", "时间"), ("types/index.html", "类型"), ("wechat/index.html", "公众号"),
+       ("search.html", "搜索")]
 
-def shell(title, body, depth, crumb=""):
+
+def shell(title, body, depth, crumb="", section="", main_class="", progress=False):
     rel = "../" * depth
-    nav = (
-        '<nav class="top"><a href="{r}index.html">首页</a><a href="{r}companies/index.html">公司</a>'
-        '<a href="{r}topics/index.html">专题</a><a href="{r}dates/index.html">时间</a>'
-        '<a href="{r}types/index.html">类型</a><a href="{r}wechat/index.html">公众号</a>'
-        '<a href="{r}search.html">搜索</a>'
-        '<span class="size">字号 <a href="#" onclick="return setSize(\'s1\')">小</a>'
-        '<a href="#" onclick="return setSize(\'\')">中</a><a href="#" onclick="return setSize(\'s3\')">大</a>'
-        '<a href="#" onclick="return setSize(\'s4\')">特大</a></span></nav>'
-    ).format(r=rel)
+    links = "".join('<a href="%s%s"%s>%s</a>' % (rel, u, ' class="on"' if t == section else "", t) for u, t in NAV)
+    head = (
+        '<header class="top"><div class="bar"><a class="brand" href="{r}index.html">AI Berkshire</a>'
+        '<nav class="main">{links}</nav><div class="tools">'
+        '<button onclick="aibSize(-1)" title="缩小字号">A−</button><button onclick="aibSize(1)" title="放大字号">A+</button>'
+        '<select id="theme" onchange="aibTheme(this.value)" title="外观"><option value="auto">自动</option>'
+        '<option value="light">浅色</option><option value="dark">深色</option></select>'
+        '</div></div></header>'
+    ).format(r=rel, links=links)
     crumb_html = '<div class="crumb">%s</div>' % crumb if crumb else ""
     return (
         '<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">'
         '<meta name="viewport" content="width=device-width,initial-scale=1">'
+        '<meta name="theme-color" content="#fbfbf9">'
         '<title>%s · %s</title><link rel="stylesheet" href="%sstyle.css">'
         '<link rel="alternate" type="application/rss+xml" title="%s" href="%sfeed.xml">'
-        '<script>%s</script></head><body>%s%s%s'
-        '<footer>%s ｜ <a href="%s">GitHub 仓库</a> ｜ 生成时间 %s</footer></body></html>'
-    ) % (html.escape(title), SITE_NAME, rel, SITE_NAME, rel, SIZE_JS, nav, crumb_html, body,
-         SITE_NAME, REPO_URL, datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"))
+        '<script>%s</script></head><body>%s%s<main class="%s">%s%s</main>'
+        '<footer>%s ｜ <a href="%s">GitHub 仓库</a> ｜ <a href="%sfeed.xml">RSS 订阅</a> ｜ 生成于 %s</footer></body></html>'
+    ) % (html.escape(title), SITE_NAME, rel, SITE_NAME, rel, PREF_JS,
+         '<div class="progress"></div>' if progress else "", head, main_class, crumb_html, body,
+         SITE_NAME, REPO_URL, rel, datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"))
 
 
 def li(it, depth, show_group=True):
@@ -374,12 +430,14 @@ def build(out_dir):
         head = "<h1>%s</h1><div class=\"meta\">%s ｜ %s ｜ <a href=\"%s/blob/main/%s\">GitHub 原文</a></div>" % (
             html.escape(it["title"]), group_link(it, 1), html.escape(meta), REPO_URL, quote(it["path"]))
         if toc:
-            head += "<details><summary>目录</summary>%s</details>" % toc
+            head += '<details class="toc"><summary>目录</summary>%s</details>' % toc
         tail = ""
         if same:
             tail = "<h2>同一专题的其他报告</h2>" + ul(same, 1, show_group=False)
         crumb = '<a href="../index.html">首页</a> › %s' % group_link(it, 1)
-        write(out_dir, it["url"], shell(it["title"], head + '<article>%s</article>' % body + tail, 1, crumb))
+        side = '<aside class="side"><div class="toc"><div class="meta">本文目录</div>%s</div></aside>' % toc if toc else "<aside class=\"side\"></aside>"
+        page = '<div class="layout"><div>%s<article>%s</article>%s</div>%s</div>' % (head, body, tail, side)
+        write(out_dir, it["url"], shell(it["title"], page, 1, crumb, main_class="doc", progress=True))
 
     # 公司索引与公司页
     def company_page(name, rows):
@@ -411,7 +469,7 @@ def build(out_dir):
         body += "<h3>%s</h3><ul class=\"list idx\">%s</ul>" % (L, "".join(
             '<li><a href="../%s">%s</a><div class="meta">%d 篇 · 最近 %s</div></li>' % (
                 comp_url[c], html.escape(c), len(companies[c]), companies[c][0]["date"] or "—") for c in names))
-    write(out_dir, "companies/index.html", shell("按公司", body, 1))
+    write(out_dir, "companies/index.html", shell("按公司", body, 1, section="公司"))
 
     # 专题
     def simple_group_page(name, rows, depth, crumb):
@@ -438,7 +496,7 @@ def build(out_dir):
         '<li><a href="../%s">%s</a><div class="meta">%d 篇 · 最近 %s</div></li>' % (
             screen_url[s], html.escape(s), len(screens[s]), screens[s][0]["date"] or "—")
         for s in sorted(screens, key=lambda s: screens[s][0]["date"] or "", reverse=True))
-    write(out_dir, "topics/index.html", shell("专题", body, 1))
+    write(out_dir, "topics/index.html", shell("专题", body, 1, section="专题"))
 
     # 时间
     years = defaultdict(list)
@@ -448,7 +506,7 @@ def build(out_dir):
     for y in sorted(years, reverse=True):
         body += "<h2>%s 年</h2><div class=\"grid\">%s</div>" % (y, "".join(
             '<a class="btn" href="%s.html">%s 月 %d</a>' % (m, int(m[5:]), len(months[m])) for m in sorted(years[y], reverse=True)))
-    write(out_dir, "dates/index.html", shell("按时间", body, 1))
+    write(out_dir, "dates/index.html", shell("按时间", body, 1, section="时间"))
     for m, rows in months.items():
         main = [r for r in rows if r["bucket"] not in NOISE_BUCKETS]
         noise = [r for r in rows if r["bucket"] in NOISE_BUCKETS]
@@ -462,7 +520,7 @@ def build(out_dir):
     tlist = [t for t in TYPE_ORDER if t in types] + [t for t in types if t not in TYPE_ORDER]
     body = "<h1>按类型</h1><div class=\"grid\">%s</div>" % "".join(
         '<a class="btn" href="%s.html">%s %d</a>' % (slug(t), html.escape(t), len(types[t])) for t in tlist)
-    write(out_dir, "types/index.html", shell("按类型", body, 1))
+    write(out_dir, "types/index.html", shell("按类型", body, 1, section="类型"))
     for t in tlist:
         rows = types[t]
         main = [r for r in rows if r["bucket"] not in NOISE_BUCKETS]
@@ -475,7 +533,7 @@ def build(out_dir):
     # 公众号发表
     wrows = sorted((r for rows in wechat.values() for r in rows), key=lambda r: r["date"], reverse=True)
     body = "<h1>公众号发表版</h1><div class=\"meta\">%d 篇，正文为公众号发表版本</div>%s" % (len(wrows), ul(wrows, 1))
-    write(out_dir, "wechat/index.html", shell("公众号", body, 1))
+    write(out_dir, "wechat/index.html", shell("公众号", body, 1, section="公众号"))
 
     # 搜索
     sdata = [{"t": i["title"], "g": i["group"], "k": i["type"], "d": i["date"], "u": i["url"]} for i in items]
@@ -488,7 +546,7 @@ def build(out_dir):
             "if(!q){out.innerHTML='';n.textContent='';return}var ws=q.split(/\\s+/);var r=D.filter(function(x){var s=(x.t+' '+x.g+' '+x.k+' '+x.d).toLowerCase();return ws.every(function(w){return s.indexOf(w)>=0})});"
             "n.textContent='共 '+r.length+' 条'+(r.length>200?'，只显示前 200 条':'');out.innerHTML=r.slice(0,200).map(function(x){return '<li><a href=\"'+x.u+'\">'+esc(x.t)+'</a><div class=\"meta\">'+esc([x.d,x.g,x.k].filter(Boolean).join(' · '))+'</div></li>'}).join('')}"
             "fetch('search.json').then(function(r){return r.json()}).then(function(d){D=d;document.getElementById('q').addEventListener('input',run);run()});</script>")
-    write(out_dir, "search.html", shell("搜索", body, 0))
+    write(out_dir, "search.html", shell("搜索", body, 0, section="搜索"))
 
     # 首页
     recent, per_group = [], defaultdict(int)
@@ -510,7 +568,7 @@ def build(out_dir):
     body += "<h2>最近更新</h2>" + ul(recent, 0)
     body += "<h2>报告最多的公司</h2><div class=\"grid\">%s</div>" % "".join(
         '<a class="btn" href="%s">%s %d</a>' % (comp_url[c], html.escape(c), len(companies[c])) for c in top[:16])
-    write(out_dir, "index.html", shell("首页", body, 0))
+    write(out_dir, "index.html", shell("首页", '<div class="hero">' + body + "</div>", 0, section="首页"))
     write(out_dir, "404.html", shell("没有这一页", "<h1>没有这一页</h1><p><a href=\"index.html\">回首页</a></p>", 0))
 
     # RSS
