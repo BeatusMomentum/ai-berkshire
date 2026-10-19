@@ -29,6 +29,8 @@ SITE_NAME = "AI Berkshire 研究阅读"
 # 访问统计：在 goatcounter.com 注册后填站点代码（如 "aiberkshire"）；留空则不加统计脚本。
 # 也可用环境变量 GOATCOUNTER_CODE 覆盖。打开任意页面并在网址后加 #notrack 可让本机不计入统计。
 GOATCOUNTER = os.environ.get("GOATCOUNTER_CODE", "")
+# 国内主统计：百度统计站点 ID（统计代码里 hm.js? 后面那串 32 位字符）；留空则不加。也可用环境变量 BAIDU_TONGJI_ID。
+BAIDU_TONGJI = os.environ.get("BAIDU_TONGJI_ID", "")
 FRONT = re.compile(r"\A---\s*\n.*?\n---\s*\n", re.S)
 H1 = re.compile(r"^#\s+(.+?)\s*$", re.M)
 DATE8 = re.compile(r"(20[2-3]\d)(0[1-9]|1[0-2])(0[1-9]|[12]\d|3[01])")
@@ -474,11 +476,19 @@ NAV = [("index.html", "首页"), ("companies/index.html", "公司"), ("topics/in
 
 
 def analytics_tag():
-    if not GOATCOUNTER:
+    """统计脚本：本机打开任意页面网址加 #notrack 后不再加载任何统计脚本，#track 恢复。"""
+    if not (GOATCOUNTER or BAIDU_TONGJI):
         return ""
-    return ("<script>(function(){try{if(location.hash==='#notrack'){localStorage.setItem('skipgc','1');alert('本设备的访问将不再计入统计')}"
-            "if(location.hash==='#track'){localStorage.removeItem('skipgc')}}catch(e){}})();</script>"
-            '<script data-goatcounter="https://%s.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>' % GOATCOUNTER)
+    loads = []
+    if BAIDU_TONGJI:
+        loads.append("window._hmt=window._hmt||[];var b=document.createElement('script');"
+                     "b.async=true;b.src='https://hm.baidu.com/hm.js?%s';document.head.appendChild(b);" % BAIDU_TONGJI)
+    if GOATCOUNTER:
+        loads.append("var g=document.createElement('script');g.async=true;g.src='//gc.zgo.at/count.js';"
+                     "g.setAttribute('data-goatcounter','https://%s.goatcounter.com/count');document.head.appendChild(g);" % GOATCOUNTER)
+    return ("<script>(function(){var skip=false;try{if(location.hash==='#notrack'){localStorage.setItem('skipgc','1');"
+            "alert('本设备的访问将不再计入统计')}if(location.hash==='#track'){localStorage.removeItem('skipgc')}"
+            "skip=!!localStorage.getItem('skipgc')}catch(e){}if(skip)return;%s})();</script>" % "".join(loads))
 
 
 def shell(title, body, depth, crumb="", section="", main_class="", progress=False, page=""):
