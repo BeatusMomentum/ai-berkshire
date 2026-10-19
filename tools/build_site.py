@@ -25,6 +25,7 @@ from pypinyin import Style, lazy_pinyin
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 REPO_URL = "https://github.com/xbtlin/ai-berkshire"
+SITE_URL = "https://xbtlin.github.io/ai-berkshire/"
 SITE_NAME = "AI Berkshire 研究阅读"
 # 访问统计：在 goatcounter.com 注册后填站点代码（如 "aiberkshire"）；留空则不加统计脚本。
 # 也可用环境变量 GOATCOUNTER_CODE 覆盖。打开任意页面并在网址后加 #notrack 可让本机不计入统计。
@@ -359,6 +360,7 @@ ul.work li>a{font-weight:400;font-size:.95rem}
 border:1px solid var(--line);border-radius:var(--radius)}.wx img{width:92px;height:92px;border-radius:6px;flex-shrink:0}
 .wx b{display:block;font-size:1rem}.wx span{color:var(--muted);font-size:.86rem}
 .wxline{margin:2.4rem 0 .6rem;padding-top:.8rem;border-top:1px solid var(--line);color:var(--muted);font-size:.85rem}
+.wxline .fix{display:block;margin-top:.3rem}
 .intro{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:1rem 1.2rem;margin:1rem 0 1.4rem}
 .intro p{margin:.3rem 0}
 .layers{display:grid;grid-template-columns:repeat(auto-fit,minmax(12rem,1fr));gap:.8rem;margin:1rem 0}
@@ -425,6 +427,7 @@ def about_page(n_reports, n_companies, n_wechat, updated):
 <li><a href="dates/index.html">按时间</a>与<a href="types/index.html">按类型</a>：看最近写了什么。</li>
 <li><a href="search.html">搜索</a>：输入公司名或关键词，例如"拼多多 财报"。</li>
 <li>右上角可调字号和深浅色；读过的文章会标记进度，下次打开可以接着读（只记在你自己的浏览器里）。</li>
+<li>发现数据错误：每篇报告末尾有"提交纠错"，会打开 GitHub 的纠错表单并自动填好报告名称，请附上正确值和来源链接。</li>
 <li>也可以用 RSS 订阅更新：<a href="feed.xml">feed.xml</a>。</li>
 </ul>
 
@@ -645,8 +648,13 @@ def build(out_dir):
         if toc:
             head += '<details class="toc"><summary>目录</summary>%s</details>' % toc
         tail = ""
+        issue = "%s/issues/new?%s" % (REPO_URL, "&".join("%s=%s" % (k, quote(v, safe="")) for k, v in [
+            ("template", "data_error.yml"), ("title", "[Data] " + it["title"][:60]),
+            ("ticker", it["group"] if it["bucket"] in ("公司", "公众号发表") else ""),
+            ("source", "%s\n阅读站：%s%s" % (it["path"], SITE_URL, it["url"]))]))
         tail += ('<p class="wxline">精选研究与报告之外的判断，首发在公众号「复利炼丹炉」'
-                 ' · <a href="../about.html">扫码关注</a></p>')
+                 ' · <a href="../about.html">扫码关注</a>'
+                 '<span class="fix">发现数据错误？<a href="%s" rel="nofollow">提交纠错</a>（需附正确值与来源）</span></p>') % html.escape(issue)
         if it.get("_work"):
             tail += ('<h2>底稿与核验（GitHub）</h2><div class="meta">这些文件不在阅读站上展示，点开为 GitHub 原文。</div>'
                      '<ul class="list work">%s</ul>') % "".join(
