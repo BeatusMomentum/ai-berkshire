@@ -774,9 +774,6 @@ def build(out_dir):
             break
     body = "<h1>%s</h1><p class=\"meta\">%d 篇报告 · %d 家公司 · 最近更新 %s</p>" % (
         SITE_NAME, len(items), len(companies), items[0]["date"] if items else "—")
-    body += ('<div class="intro"><p>用 AI 做价值投资研究的开源项目。这里收录全部成品报告；'
-             '精选研究发在公众号「复利炼丹炉」，全部底稿在 <a href="%s">GitHub</a>。</p>'
-             '<p><a href="about.html">了解这个项目 →</a></p></div>') % REPO_URL
     body += "<div class=\"grid big\">%s</div>" % "".join(
         '<a class="btn" href="%s">%s</a>' % (u, t) for u, t in [
             ("companies/index.html", "按公司"), ("topics/index.html", "专题与横评"), ("dates/index.html", "按时间"),
