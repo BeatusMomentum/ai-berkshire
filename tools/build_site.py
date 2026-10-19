@@ -64,8 +64,27 @@ def initial(name):
 
 
 def read(path):
-    with open(os.path.join(ROOT, path), encoding="utf-8", errors="replace") as f:
-        return f.read()
+    full = os.path.join(ROOT, path)
+    if os.path.isfile(full):
+        with open(full, encoding="utf-8", errors="replace") as f:
+            return f.read()
+    return blob(path).decode("utf-8", "replace")
+
+
+def blob(path):
+    """读取已入库内容；本地工作区缺失（例如他处未提交的删除）时回退到 HEAD。"""
+    return subprocess.check_output(["git", "show", "HEAD:%s" % path], cwd=ROOT,
+                                   stderr=subprocess.DEVNULL)
+
+
+def available(path):
+    if os.path.isfile(os.path.join(ROOT, path)):
+        return True
+    try:
+        blob(path)
+        return True
+    except subprocess.CalledProcessError:
+        return False
 
 
 # ---------- 收集条目 ----------
@@ -74,12 +93,52 @@ def collect():
     items = []
     idx = json.load(open(os.path.join(ROOT, "reports", "index.json"), encoding="utf-8"))
     for r in idx["reports"]:
-        if not os.path.exists(os.path.join(ROOT, r["path"])):
+        if not available(r["path"]):
             continue
         items.append({
             "title": r["title"], "path": r["path"], "bucket": r["bucket"], "group": r["group"],
             "series": r.get("series", ""), "type": r.get("type", "研究"), "date": r.get("date", ""),
         })
+    seen = {i["path"] for i in items}
+    dir_meta = {}
+    for i in items:
+        dir_meta.setdefault(os.path.dirname(i["path"]), (i["bucket"], i["group"]))
+    for p in tracked("reports/"):
+        if not p.endswith("README.md") or p in seen or "/_index/" in p:
+            continue
+        d = os.path.dirname(p)
+        bucket, group = dir_meta.get(d, (None, None))
+        while bucket is None and d.count("/") > 0:
+            d = os.path.dirname(d)
+            bucket, group = dir_meta.get(d, (None, None))
+        if bucket is None:
+            parts = p.split("/")
+            bucket, group = ("专题", parts[1] if len(parts) > 2 else "研究总览")
+        text = read(p)
+        m = H1.search(FRONT.sub("", text))
+        items.append({"title": (m.group(1).strip() if m else "%s 导读" % group), "path": p,
+                      "bucket": bucket, "group": group, "series": "", "type": "导读",
+                      "date": git_date(p)})
+    for p in tracked("筛选公司/"):
+        if not p.endswith(".md"):
+            continue
+        parts = p.split("/")
+        group = parts[1] if len(parts) > 2 else "筛选公司"
+        text = read(p)
+        m = H1.search(FRONT.sub("", text))
+        name = os.path.basename(p)[:-3]
+        dm = DATE8.search(name)
+        items.append({"title": m.group(1).strip() if m else name, "path": p, "bucket": "筛选池",
+                      "group": group, "series": "", "type": "筛选",
+                      "date": "%s-%s-%s" % dm.groups() if dm else git_date(p)})
+    for p in tracked("docs/"):
+        if not p.endswith(".md") or os.path.basename(p) in ("ROADMAP.md", "README.md"):
+            continue
+        text = read(p)
+        m = H1.search(FRONT.sub("", text))
+        items.append({"title": m.group(1).strip() if m else os.path.basename(p)[:-3], "path": p,
+                      "bucket": "专题", "group": "随笔与综述", "series": "", "type": "研究",
+                      "date": git_date(p)})
     for p in tracked("投资炼丹/"):
         if not p.endswith(".md") or p.endswith("README.md"):
             continue
@@ -230,13 +289,17 @@ def convert(it, by_path, out_dir):
             return '%s="../%s"' % (attr, by_path[target]["url"])
         ext = os.path.splitext(target)[1].lower()
         src = os.path.join(ROOT, target)
-        if ext in ASSET_EXT and os.path.isfile(src):
+        if ext in ASSET_EXT and available(target):
             dst = os.path.join(out_dir, "files", target)
             os.makedirs(os.path.dirname(dst), exist_ok=True)
             if not os.path.exists(dst):
-                shutil.copy2(src, dst)
+                if os.path.isfile(src):
+                    shutil.copy2(src, dst)
+                else:
+                    with open(dst, "wb") as fh:
+                        fh.write(blob(target))
             return '%s="../files/%s"' % (attr, quote(target))
-        if os.path.exists(src):
+        if available(target):
             return '%s="%s/blob/main/%s"' % (attr, REPO_URL, quote(target))
         missing.append(url)
         return m.group(0)
@@ -324,7 +387,7 @@ def build(out_dir):
         for r in rows:
             key = "公众号发表" if r["bucket"] == "公众号发表" else r["type"]
             groups[key].append(r)
-        order = ["公众号发表"] + TYPE_ORDER
+        order = ["导读", "公众号发表"] + TYPE_ORDER
         parts = ["<h1>%s</h1><div class=\"meta\">共 %d 篇，最近更新 %s</div>" % (
             html.escape(name), len(rows), rows[0]["date"] if rows and rows[0]["date"] else "—")]
         for k in order + [k for k in groups if k not in order]:
