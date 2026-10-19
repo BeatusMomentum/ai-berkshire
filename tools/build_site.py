@@ -31,7 +31,7 @@ SITE_NAME = "AI Berkshire 研究阅读"
 # 也可用环境变量 GOATCOUNTER_CODE 覆盖。打开任意页面并在网址后加 #notrack 可让本机不计入统计。
 GOATCOUNTER = os.environ.get("GOATCOUNTER_CODE", "")
 # 国内主统计：百度统计站点 ID（统计代码里 hm.js? 后面那串 32 位字符）；留空则不加。也可用环境变量 BAIDU_TONGJI_ID。
-BAIDU_TONGJI = os.environ.get("BAIDU_TONGJI_ID", "")
+BAIDU_TONGJI = os.environ.get("BAIDU_TONGJI_ID", "fb8b18770c2f12915beaa9539754eb5c")
 FRONT = re.compile(r"\A---\s*\n.*?\n---\s*\n", re.S)
 H1 = re.compile(r"^#\s+(.+?)\s*$", re.M)
 DATE8 = re.compile(r"(20[2-3]\d)(0[1-9]|1[0-2])(0[1-9]|[12]\d|3[01])")
@@ -774,7 +774,11 @@ def build(out_dir):
             "<script>var D=null;function esc(s){return s.replace(/[&<>\"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;'}[c]})}"
             "function run(){var q=document.getElementById('q').value.trim().toLowerCase();var out=document.getElementById('out'),n=document.getElementById('n');"
             "if(!q){out.innerHTML='';n.textContent='';return}var ws=q.split(/\\s+/);var r=D.filter(function(x){var s=(x.t+' '+x.g+' '+x.k+' '+x.d).toLowerCase();return ws.every(function(w){return s.indexOf(w)>=0})});"
-            "n.textContent='共 '+r.length+' 条'+(r.length>200?'，只显示前 200 条':'');out.innerHTML=r.slice(0,200).map(function(x){return '<li><a href=\"'+x.u+'\">'+esc(x.t)+'</a><div class=\"meta\">'+esc([x.d,x.g,x.k].filter(Boolean).join(' · '))+'</div></li>'}).join('')}"
+            "n.textContent='共 '+r.length+' 条'+(r.length>200?'，只显示前 200 条':'');"
+            "if(!r.length){out.innerHTML='<li>没找到相关报告。想看这家公司的研究，可以在公众号「复利炼丹炉」留言（<a href=\"about.html\">扫码</a>），或在 GitHub <a rel=\"nofollow\" href=\"" + REPO_URL + "/issues/new?template=suggestion.yml&title='+encodeURIComponent('[建议] 希望研究：'+q)+'\">提研究建议</a>。</li>';}"
+            "else{out.innerHTML=r.slice(0,200).map(function(x){return '<li><a href=\"'+x.u+'\">'+esc(x.t)+'</a><div class=\"meta\">'+esc([x.d,x.g,x.k].filter(Boolean).join(' · '))+'</div></li>'}).join('')}"
+            "clearTimeout(window._lt);window._lt=setTimeout(function(){if(q.length>=2&&q!==window._lq&&window._hmt){window._lq=q;"
+            "window._hmt.push(['_trackEvent','站内搜索',r.length?'有结果':'无结果',q])}},1500)}"
             "fetch('search.json').then(function(r){return r.json()}).then(function(d){D=d;document.getElementById('q').addEventListener('input',run);run()});</script>")
     write(out_dir, "search.html", shell("搜索", body, 0, section="搜索"))
 
