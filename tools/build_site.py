@@ -26,6 +26,9 @@ from pypinyin import Style, lazy_pinyin
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 REPO_URL = "https://github.com/xbtlin/ai-berkshire"
 SITE_NAME = "AI Berkshire 研究阅读"
+# 访问统计：在 goatcounter.com 注册后填站点代码（如 "aiberkshire"）；留空则不加统计脚本。
+# 也可用环境变量 GOATCOUNTER_CODE 覆盖。打开任意页面并在网址后加 #notrack 可让本机不计入统计。
+GOATCOUNTER = os.environ.get("GOATCOUNTER_CODE", "")
 FRONT = re.compile(r"\A---\s*\n.*?\n---\s*\n", re.S)
 H1 = re.compile(r"^#\s+(.+?)\s*$", re.M)
 DATE8 = re.compile(r"(20[2-3]\d)(0[1-9]|1[0-2])(0[1-9]|[12]\d|3[01])")
@@ -470,6 +473,14 @@ NAV = [("index.html", "首页"), ("companies/index.html", "公司"), ("topics/in
        ("search.html", "搜索"), ("about.html", "关于")]
 
 
+def analytics_tag():
+    if not GOATCOUNTER:
+        return ""
+    return ("<script>(function(){try{if(location.hash==='#notrack'){localStorage.setItem('skipgc','1');alert('本设备的访问将不再计入统计')}"
+            "if(location.hash==='#track'){localStorage.removeItem('skipgc')}}catch(e){}})();</script>"
+            '<script data-goatcounter="https://%s.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>' % GOATCOUNTER)
+
+
 def shell(title, body, depth, crumb="", section="", main_class="", progress=False, page=""):
     rel = "../" * depth
     links = "".join('<a href="%s%s"%s>%s</a>' % (rel, u, ' class="on"' if t == section else "", t) for u, t in NAV)
@@ -488,7 +499,7 @@ def shell(title, body, depth, crumb="", section="", main_class="", progress=Fals
         '<meta name="theme-color" content="#fbfbf9">'
         '<title>%s · %s</title><link rel="stylesheet" href="%sstyle.css">'
         '<link rel="alternate" type="application/rss+xml" title="%s" href="%sfeed.xml">'
-        '<script>%s</script></head><body data-root="%s" data-page="%s" data-title="%s">%s%s<main class="%s">%s%s</main>'
+        '<script>%s</script>' + analytics_tag() + '</head><body data-root="%s" data-page="%s" data-title="%s">%s%s<main class="%s">%s%s</main>'
         '<footer>%s ｜ <a href="%sabout.html">关于本站</a> ｜ 公众号「复利炼丹炉」 ｜ <a href="%s">GitHub 仓库</a> ｜ <a href="%sfeed.xml">RSS 订阅</a> ｜ 生成于 %s</footer></body></html>'
     ) % (html.escape(title), SITE_NAME, rel, SITE_NAME, rel, PREF_JS + READ_JS, rel, page, html.escape(title, quote=True),
          '<div class="progress"></div>' if progress else "", head, main_class, crumb_html, body,
