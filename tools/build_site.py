@@ -622,6 +622,42 @@ def build(out_dir):
             months[it["date"][:7]].append(it)
         types[it["type"]].append(it)
 
+    # 专题目录里写单家公司的报告（如七姐妹逐家报告），同时挂到对应公司页
+    alias = {"谷歌": "Google", "Alphabet": "Google", "特斯拉": "Tesla", "Amazon": "亚马逊", "微软": "微软", "苹果": "苹果", "贵州茅台": "茅台"}
+    names = sorted(set(companies) | set(alias), key=len, reverse=True)
+    for it in items:
+        if it["bucket"] not in ("专题",):
+            continue
+        t = it["title"].strip()
+        hit = None
+        for n in names:
+            if re.match(re.escape(n) + r"(（|\(|：|:|\s)", t):
+                hit = alias.get(n, n)
+                break
+        if not hit:
+            m = re.match(r"^([^（(：:\s]{1,12})（([A-Z0-9]{1,6}(\.[A-Z]{1,2})?)）", t)
+            if m:
+                hit = alias.get(m.group(1), m.group(1))
+        if hit and it not in companies[hit]:
+            companies[hit].append(it)
+            it["_also"] = hit
+    for c in companies:
+        companies[c].sort(key=lambda x: x["date"] or "", reverse=True)
+
+    # 专题显示名：优先用目录 README 的标题
+    tname = {}
+    for it in items:
+        if os.path.basename(it["path"]) != "README.md":
+            continue
+        d = os.path.basename(os.path.dirname(it["path"]))
+        if d in topics and d not in tname:
+            tname[d] = it["title"]
+            if it["group"] != d and it in topics.get(it["group"], []):
+                topics[it["group"]].remove(it)
+                topics[d].append(it)
+                it["group"] = d
+    disp = lambda g: tname.get(g, g)
+
     comp_url = {c: "companies/%s/index.html" % slug(c) for c in companies}
     topic_url = {t: "topics/%s/index.html" % slug(t) for t in topics}
     screen_url = {s: "screens/%s/index.html" % slug(s) for s in screens}
@@ -634,8 +670,8 @@ def build(out_dir):
             return '<a href="%s%s">%s</a>' % (rel, screen_url[it["group"]], html.escape(it["group"]))
         g = "实盘记录" if it["bucket"] == "实盘记录" else it["group"]
         if g in topic_url:
-            return '<a href="%s%s">%s</a>' % (rel, topic_url[g], html.escape(g))
-        return html.escape(g)
+            return '<a href="%s%s">%s</a>' % (rel, topic_url[g], html.escape(disp(g)))
+        return html.escape(disp(g))
 
     # 报告页
     for it in items:
@@ -715,13 +751,13 @@ def build(out_dir):
         return shell(name, "".join(parts), depth, crumb)
 
     for t, rows in topics.items():
-        write(out_dir, topic_url[t], simple_group_page(t, rows, 2, '<a href="../../index.html">首页</a> › <a href="../index.html">专题</a>'))
+        write(out_dir, topic_url[t], simple_group_page(disp(t), rows, 2, '<a href="../../index.html">首页</a> › <a href="../index.html">专题</a>'))
     for s, rows in screens.items():
         write(out_dir, screen_url[s], simple_group_page(s, rows, 2, '<a href="../../index.html">首页</a> › <a href="../../topics/index.html">专题</a>'))
     tnames = sorted(topics, key=lambda t: topics[t][0]["date"] or "", reverse=True)
     body = "<h1>专题与横评</h1><ul class=\"list\">%s</ul>" % "".join(
         '<li><a href="../%s">%s</a><div class="meta">%d 篇 · 最近 %s</div></li>' % (
-            topic_url[t], html.escape(t), len(topics[t]), topics[t][0]["date"] or "—") for t in tnames)
+            topic_url[t], html.escape(disp(t)), len(topics[t]), topics[t][0]["date"] or "—") for t in tnames)
     body += "<h2>筛选池与召回池</h2><ul class=\"list\">%s</ul>" % "".join(
         '<li><a href="../%s">%s</a><div class="meta">%d 篇 · 最近 %s</div></li>' % (
             screen_url[s], html.escape(s), len(screens[s]), screens[s][0]["date"] or "—")
@@ -793,19 +829,35 @@ def build(out_dir):
                                                          items[0]["date"] if items else "—"), 0, section="关于"))
 
     # 首页
-    recent, per_group, seen_titles = [], defaultdict(int), set()
+    pool, seen_titles = [], set()
     for i in items:
         tkey = re.sub(r"\s+", "", i["title"])
-        if tkey in seen_titles:
+        if tkey in seen_titles or i["bucket"] in NOISE_BUCKETS or i["series"] == "evidence" or i["type"] == "导读":
             continue
-        if i["bucket"] in NOISE_BUCKETS or i["type"] == "底稿" or i["series"] == "evidence":
-            continue
-        if per_group[i["group"]] >= 2:
-            continue
-        per_group[i["group"]] += 1
         seen_titles.add(tkey)
-        recent.append(i)
-        if len(recent) >= 30:
+        pool.append(i)
+    bundles = defaultdict(list)
+    for i in pool:
+        bundles[(i["date"], i["group"], i["bucket"])].append(i)
+    recent_rows, used, shown = [], set(), 0
+    for i in pool:
+        key = (i["date"], i["group"], i["bucket"])
+        if key in used:
+            continue
+        rows = bundles[key]
+        if len(rows) >= 3:
+            used.add(key)
+            url = comp_url.get(i["group"]) if i["bucket"] in ("公司", "公众号发表") else (
+                topic_url.get(i["group"]) or screen_url.get(i["group"]))
+            name = i["group"] if i["bucket"] in ("公司", "公众号发表") else disp(i["group"])
+            titles = "；".join(r["title"].split("：")[0].split("独立")[0] for r in rows[:7])
+            recent_rows.append('<li><a href="%s">%s（%d 篇）</a><div class="meta">%s · %s%s</div></li>' % (
+                url or rows[0]["url"], html.escape(name), len(rows), i["date"], html.escape(titles[:90]),
+                "等" if len(rows) > 7 else ""))
+        else:
+            recent_rows.append(li(i, 0))
+        shown += 1
+        if shown >= 30:
             break
     body = "<h1>%s</h1><p class=\"meta\">%d 篇报告 · %d 家公司 · 最近更新 %s</p>" % (
         SITE_NAME, len(items), len(companies), items[0]["date"] if items else "—")
@@ -814,7 +866,7 @@ def build(out_dir):
             ("companies/index.html", "按公司"), ("topics/index.html", "专题与横评"), ("dates/index.html", "按时间"),
             ("types/index.html", "按类型"), ("wechat/index.html", "公众号发表版"), ("search.html", "搜索")])
     body += '<div id="recent-read"></div>'
-    body += "<h2>最近更新</h2>" + ul(recent, 0)
+    body += "<h2>最近更新</h2><ul class=\"list\">%s</ul>" % "".join(recent_rows)
     body += "<h2>报告最多的公司</h2><div class=\"grid\">%s</div>" % "".join(
         '<a class="btn" href="%s">%s %d</a>' % (comp_url[c], html.escape(c), len(companies[c])) for c in top[:16])
     write(out_dir, "index.html", shell("首页", '<div class="hero">' + body + "</div>", 0, section="首页"))
