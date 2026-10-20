@@ -1,19 +1,8 @@
 {
-  "count": 2464,
-  "published": 2265,
+  "count": 2457,
+  "published": 2258,
   "drafts": 199,
   "reports": [
-    {
-      "title": "贵州茅台 600519.SH 独立 /investment-research 研究报告 — 2026-10-20",
-      "path": "reports/茅台/贵州茅台-research-20261020.md",
-      "bucket": "公司",
-      "group": "茅台",
-      "series": "",
-      "type": "研究",
-      "date": "2026-10-20",
-      "date_source": "文件名",
-      "ticker": ""
-    },
     {
       "title": "贵州茅台（600519）研究报告",
       "path": "reports/茅台/茅台研究报告-20261020.md",
@@ -48,17 +37,6 @@
       "ticker": ""
     },
     {
-      "title": "腾讯（0700.HK）独立投资研究报告 /investment-research — 2026-10-20",
-      "path": "reports/腾讯/腾讯-research-20261020.md",
-      "bucket": "公司",
-      "group": "腾讯",
-      "series": "",
-      "type": "研究",
-      "date": "2026-10-20",
-      "date_source": "文件名",
-      "ticker": ""
-    },
-    {
       "title": "Audit scope",
       "path": "reports/腾讯/research-20261020/audit-scope.md",
       "bucket": "公司",
@@ -72,17 +50,6 @@
     {
       "title": "美团（03690.HK）研究报告",
       "path": "reports/美团/美团研究报告-20261020.md",
-      "bucket": "公司",
-      "group": "美团",
-      "series": "",
-      "type": "研究",
-      "date": "2026-10-20",
-      "date_source": "文件名",
-      "ticker": ""
-    },
-    {
-      "title": "美团（3690.HK）独立投资研究报告 /investment-research — 2026-10-20",
-      "path": "reports/美团/美团-research-20261020.md",
       "bucket": "公司",
       "group": "美团",
       "series": "",
@@ -125,17 +92,6 @@
       "ticker": ""
     },
     {
-      "title": "泡泡玛特 9992.HK 独立 /investment-research 研究报告 — 2026-10-20",
-      "path": "reports/泡泡玛特/泡泡玛特-research-20261020.md",
-      "bucket": "公司",
-      "group": "泡泡玛特",
-      "series": "",
-      "type": "研究",
-      "date": "2026-10-20",
-      "date_source": "文件名",
-      "ticker": ""
-    },
-    {
       "title": "泡泡玛特研究证据与审计范围",
       "path": "reports/泡泡玛特/research-20261020/evidence-and-audit.md",
       "bucket": "公司",
@@ -158,17 +114,6 @@
       "ticker": ""
     },
     {
-      "title": "拼多多（PDD）独立投资研究报告 /investment-research — 2026-10-20",
-      "path": "reports/拼多多/拼多多-research-20261020.md",
-      "bucket": "公司",
-      "group": "拼多多",
-      "series": "",
-      "type": "研究",
-      "date": "2026-10-20",
-      "date_source": "文件名",
-      "ticker": ""
-    },
-    {
       "title": "Audit scope",
       "path": "reports/拼多多/research-20261020/audit-scope.md",
       "bucket": "公司",
@@ -182,17 +127,6 @@
     {
       "title": "快手科技（01024.HK）研究报告",
       "path": "reports/快手/快手研究报告-20261020.md",
-      "bucket": "公司",
-      "group": "快手",
-      "series": "",
-      "type": "研究",
-      "date": "2026-10-20",
-      "date_source": "文件名",
-      "ticker": ""
-    },
-    {
-      "title": "快手 1024.HK 独立 /investment-research 研究报告 — 2026-10-20",
-      "path": "reports/快手/快手-research-20261020.md",
       "bucket": "公司",
       "group": "快手",
       "series": "",
@@ -259,17 +193,6 @@
     {
       "title": "MiniMax 投资研究报告：模型效率能否长成每股收益",
       "path": "reports/MINIMAX/MiniMax研究报告-20261020.md",
-      "bucket": "公司",
-      "group": "MiniMax",
-      "series": "",
-      "type": "研究",
-      "date": "2026-10-20",
-      "date_source": "文件名",
-      "ticker": ""
-    },
-    {
-      "title": "MiniMax 0100.HK 独立 /investment-research 研究报告 — 2026-10-20",
-      "path": "reports/MINIMAX/MiniMax-research-20261020.md",
       "bucket": "公司",
       "group": "MiniMax",
       "series": "",
