@@ -1,8 +1,107 @@
 {
-  "count": 2437,
-  "published": 2247,
+  "count": 2446,
+  "published": 2256,
   "drafts": 190,
   "reports": [
+    {
+      "title": "拼多多（PDD）独立投资研究报告",
+      "path": "reports/拼多多/拼多多-research-20261020.md",
+      "bucket": "公司",
+      "group": "拼多多",
+      "series": "",
+      "type": "研究",
+      "date": "2026-10-20",
+      "date_source": "文件名",
+      "ticker": ""
+    },
+    {
+      "title": "腾讯控股（0700.HK）独立投资研究报告",
+      "path": "reports/腾讯/腾讯-research-20261020.md",
+      "bucket": "公司",
+      "group": "腾讯",
+      "series": "",
+      "type": "研究",
+      "date": "2026-10-20",
+      "date_source": "文件名",
+      "ticker": ""
+    },
+    {
+      "title": "美团（3690.HK）独立投资研究报告",
+      "path": "reports/美团/美团-research-20261020.md",
+      "bucket": "公司",
+      "group": "美团",
+      "series": "",
+      "type": "研究",
+      "date": "2026-10-20",
+      "date_source": "文件名",
+      "ticker": ""
+    },
+    {
+      "title": "快手（1024.HK）独立投资研究报告",
+      "path": "reports/快手/快手-research-20261020.md",
+      "bucket": "公司",
+      "group": "快手",
+      "series": "",
+      "type": "研究",
+      "date": "2026-10-20",
+      "date_source": "文件名",
+      "ticker": ""
+    },
+    {
+      "title": "贵州茅台（600519.SH）独立投资研究报告",
+      "path": "reports/茅台/贵州茅台-research-20261020.md",
+      "bucket": "公司",
+      "group": "茅台",
+      "series": "",
+      "type": "研究",
+      "date": "2026-10-20",
+      "date_source": "文件名",
+      "ticker": ""
+    },
+    {
+      "title": "泡泡玛特（9992.HK）独立投资研究报告",
+      "path": "reports/泡泡玛特/泡泡玛特-research-20261020.md",
+      "bucket": "公司",
+      "group": "泡泡玛特",
+      "series": "",
+      "type": "研究",
+      "date": "2026-10-20",
+      "date_source": "文件名",
+      "ticker": ""
+    },
+    {
+      "title": "MiniMax（0100.HK）独立投资研究报告",
+      "path": "reports/MINIMAX/MiniMax-research-20261020.md",
+      "bucket": "公司",
+      "group": "MiniMax",
+      "series": "",
+      "type": "研究",
+      "date": "2026-10-20",
+      "date_source": "文件名",
+      "ticker": ""
+    },
+    {
+      "title": "科大讯飞（002230.SZ）独立投资研究报告",
+      "path": "reports/科大讯飞/科大讯飞-research-20261020.md",
+      "bucket": "公司",
+      "group": "科大讯飞",
+      "series": "",
+      "type": "研究",
+      "date": "2026-10-20",
+      "date_source": "文件名",
+      "ticker": ""
+    },
+    {
+      "title": "寒武纪（688256.SH）独立投资研究报告",
+      "path": "reports/寒武纪/寒武纪-research-20261020.md",
+      "bucket": "公司",
+      "group": "寒武纪",
+      "series": "",
+      "type": "研究",
+      "date": "2026-10-20",
+      "date_source": "文件名",
+      "ticker": ""
+    },
     {
       "title": "苹果（AAPL）投资研究报告",
       "path": "reports/苹果/苹果投资研究报告-20261019.md",
