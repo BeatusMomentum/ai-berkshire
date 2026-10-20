@@ -1,6 +1,6 @@
 {
-  "count": 2457,
-  "published": 2258,
+  "count": 2455,
+  "published": 2256,
   "drafts": 199,
   "reports": [
     {
@@ -70,17 +70,6 @@
       "ticker": ""
     },
     {
-      "title": "科大讯飞 002230.SZ 独立 /investment-research 研究报告 — 2026-10-20",
-      "path": "reports/科大讯飞/科大讯飞-research-20261020.md",
-      "bucket": "公司",
-      "group": "科大讯飞",
-      "series": "",
-      "type": "研究",
-      "date": "2026-10-20",
-      "date_source": "文件名",
-      "ticker": ""
-    },
-    {
       "title": "泡泡玛特：从爆款公司到 IP 平台，现金流还差哪一步",
       "path": "reports/泡泡玛特/泡泡玛特研究报告-20261020.md",
       "bucket": "公司",
@@ -142,17 +131,6 @@
       "group": "快手",
       "series": "research-20261020",
       "type": "底稿",
-      "date": "2026-10-20",
-      "date_source": "文件名",
-      "ticker": ""
-    },
-    {
-      "title": "寒武纪 688256.SH 独立 /investment-research 研究报告 — 2026-10-20",
-      "path": "reports/寒武纪/寒武纪-research-20261020.md",
-      "bucket": "公司",
-      "group": "寒武纪",
-      "series": "",
-      "type": "研究",
       "date": "2026-10-20",
       "date_source": "文件名",
       "ticker": ""
