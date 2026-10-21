@@ -1,8 +1,140 @@
 {
-  "count": 2455,
-  "published": 2256,
-  "drafts": 199,
+  "count": 2467,
+  "published": 2262,
+  "drafts": 205,
   "reports": [
+    {
+      "title": "网易研究：三成市值是净现金的游戏现金流，125美元处在观望区，115美元以下分批",
+      "path": "reports/网易/网易研究报告-20261021.md",
+      "bucket": "公司",
+      "group": "网易",
+      "series": "",
+      "type": "研究",
+      "date": "2026-10-21",
+      "date_source": "front-matter",
+      "ticker": ""
+    },
+    {
+      "title": "来源与证据登记",
+      "path": "reports/网易/research-20261021/sources.md",
+      "bucket": "公司",
+      "group": "网易",
+      "series": "research-20261021",
+      "type": "底稿",
+      "date": "2026-10-21",
+      "date_source": "文件名",
+      "ticker": ""
+    },
+    {
+      "title": "理想汽车：市值约等于净现金，经营业务只被定价约230亿元",
+      "path": "reports/理想汽车/理想汽车研究报告-20261021.md",
+      "bucket": "公司",
+      "group": "理想汽车",
+      "series": "",
+      "type": "研究",
+      "date": "2026-10-21",
+      "date_source": "front-matter",
+      "ticker": ""
+    },
+    {
+      "title": "来源清单",
+      "path": "reports/理想汽车/research-20261021/sources.md",
+      "bucket": "公司",
+      "group": "理想汽车",
+      "series": "research-20261021",
+      "type": "底稿",
+      "date": "2026-10-21",
+      "date_source": "文件名",
+      "ticker": ""
+    },
+    {
+      "title": "滴滴全球研究：国内出行赚的钱正被海外外卖烧掉，场外价格已打到基准价值一半",
+      "path": "reports/滴滴/滴滴研究报告-20261021.md",
+      "bucket": "公司",
+      "group": "滴滴",
+      "series": "",
+      "type": "研究",
+      "date": "2026-10-21",
+      "date_source": "front-matter",
+      "ticker": ""
+    },
+    {
+      "title": "来源与证据登记",
+      "path": "reports/滴滴/research-20261021/sources.md",
+      "bucket": "公司",
+      "group": "滴滴",
+      "series": "research-20261021",
+      "type": "底稿",
+      "date": "2026-10-21",
+      "date_source": "文件名",
+      "ticker": ""
+    },
+    {
+      "title": "汽车之家：市值约等于净现金，收入一年少三成，买的是现金怎么回到股东手里",
+      "path": "reports/汽车之家/汽车之家研究报告-20261021.md",
+      "bucket": "公司",
+      "group": "汽车之家",
+      "series": "",
+      "type": "研究",
+      "date": "2026-10-21",
+      "date_source": "front-matter",
+      "ticker": ""
+    },
+    {
+      "title": "来源与证据登记",
+      "path": "reports/汽车之家/research-20261021/sources.md",
+      "bucket": "公司",
+      "group": "汽车之家",
+      "series": "research-20261021",
+      "type": "底稿",
+      "date": "2026-10-21",
+      "date_source": "文件名",
+      "ticker": ""
+    },
+    {
+      "title": "唯品会（VIPS）研究报告：会计净现金占市值55%，股价已按利润长期萎缩定价",
+      "path": "reports/唯品会/唯品会研究报告-20261021.md",
+      "bucket": "公司",
+      "group": "唯品会",
+      "series": "",
+      "type": "研究",
+      "date": "2026-10-21",
+      "date_source": "front-matter",
+      "ticker": ""
+    },
+    {
+      "title": "来源与证据登记",
+      "path": "reports/唯品会/research-20261021/sources.md",
+      "bucket": "公司",
+      "group": "唯品会",
+      "series": "research-20261021",
+      "type": "底稿",
+      "date": "2026-10-21",
+      "date_source": "文件名",
+      "ticker": ""
+    },
+    {
+      "title": "京东集团研究：市值八成是子公司和现金，外卖亏损决定剩下两成值多少",
+      "path": "reports/京东/京东研究报告-20261021.md",
+      "bucket": "公司",
+      "group": "京东",
+      "series": "",
+      "type": "研究",
+      "date": "2026-10-21",
+      "date_source": "front-matter",
+      "ticker": ""
+    },
+    {
+      "title": "来源与证据登记",
+      "path": "reports/京东/research-20261021/sources.md",
+      "bucket": "公司",
+      "group": "京东",
+      "series": "research-20261021",
+      "type": "底稿",
+      "date": "2026-10-21",
+      "date_source": "文件名",
+      "ticker": ""
+    },
     {
       "title": "贵州茅台（600519）研究报告",
       "path": "reports/茅台/茅台研究报告-20261020.md",
