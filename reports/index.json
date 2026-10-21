@@ -1,8 +1,19 @@
 {
-  "count": 2467,
-  "published": 2262,
+  "count": 2468,
+  "published": 2263,
   "drafts": 205,
   "reports": [
+    {
+      "title": "泡泡玛特-公众号-段永平发言实录",
+      "path": "reports/泡泡玛特/泡泡玛特-公众号-段永平发言实录-20261022.md",
+      "bucket": "公司",
+      "group": "泡泡玛特",
+      "series": "",
+      "type": "公众号",
+      "date": "2026-10-22",
+      "date_source": "文件名",
+      "ticker": ""
+    },
     {
       "title": "网易研究：三成市值是净现金的游戏现金流，125美元处在观望区，115美元以下分批",
       "path": "reports/网易/网易研究报告-20261021.md",
