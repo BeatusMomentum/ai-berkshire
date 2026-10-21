@@ -1,6 +1,6 @@
 {
-  "count": 2467,
-  "published": 2262,
+  "count": 2468,
+  "published": 2263,
   "drafts": 205,
   "reports": [
     {
@@ -65,6 +65,17 @@
       "group": "滴滴",
       "series": "research-20261021",
       "type": "底稿",
+      "date": "2026-10-21",
+      "date_source": "文件名",
+      "ticker": ""
+    },
+    {
+      "title": "泡泡玛特机构调研汇总：短期修复分歧、营业额与利润展望",
+      "path": "reports/泡泡玛特/泡泡玛特-机构调研汇总与经营展望-20261021.md",
+      "bucket": "公司",
+      "group": "泡泡玛特",
+      "series": "",
+      "type": "研究",
       "date": "2026-10-21",
       "date_source": "文件名",
       "ticker": ""
