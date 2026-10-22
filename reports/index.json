@@ -1,8 +1,19 @@
 {
-  "count": 2473,
-  "published": 2266,
+  "count": 2474,
+  "published": 2267,
   "drafts": 207,
   "reports": [
+    {
+      "title": "恒生科技估值全景：指数与十家公司的历史位置（2026-10-23）",
+      "path": "reports/恒生科技/恒生科技估值全景-20261023.md",
+      "bucket": "专题",
+      "group": "恒生科技",
+      "series": "",
+      "type": "估值仓位",
+      "date": "2026-10-23",
+      "date_source": "文件名",
+      "ticker": ""
+    },
     {
       "title": "纳指崩盘 78%：苹果从底部涨了 1000 倍",
       "path": "reports/市场复盘/纳指崩盘复盘-公众号-20261023.md",
