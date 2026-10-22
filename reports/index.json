@@ -1,8 +1,19 @@
 {
-  "count": 2472,
-  "published": 2265,
+  "count": 2473,
+  "published": 2266,
   "drafts": 207,
   "reports": [
+    {
+      "title": "纳指崩盘 78%：苹果从底部涨了 1000 倍",
+      "path": "reports/市场复盘/纳指崩盘复盘-公众号-20261023.md",
+      "bucket": "专题",
+      "group": "市场复盘",
+      "series": "",
+      "type": "公众号",
+      "date": "2026-10-23",
+      "date_source": "文件名",
+      "ticker": ""
+    },
     {
       "title": "泡泡玛特-公众号-段永平发言实录",
       "path": "reports/泡泡玛特/泡泡玛特-公众号-段永平发言实录-20261022.md",
